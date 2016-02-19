@@ -4,14 +4,17 @@
 // Layout & grids
 @import "layout";
 @import "buttons";
+@import "titles";
 
 // Modules
-@import "modules/breadcrumbs";
 @import "modules/header";
-@import "modules/aside";
+@import "modules/menu";
+
+// Home
+@import "modules/slider";
+
 @import "modules/section";
-@import "modules/content-grid";
-@import "modules/blog";
+@import "modules/grid";
 
 // Faqs
 @import "modules/faqs";
@@ -21,11 +24,6 @@
 // Post
 @import "modules/post";
 @import "modules/toggle";
-
-// By...
-@import "modules/by-app";
-@import "modules/by-faqs";
-@import "modules/by-theme";
 
 // Sintax
 @import "syntax";
