@@ -1,3 +1,35 @@
+/**
+ * @file Returns a slugified string
+ * @version 1.0.0
+ * @author {@link http://github.com/furzeface Daniel Furze}
+ */
+
+Handlebars.registerHelper('slugify', function (component, options) {
+  /**
+  * Return a slug for a DOM id or class.
+  * @function slugify
+  * @memberof Handlebars.helpers
+  * @param {string} component - string to slugify.
+  * @example
+  * // returns stuff-in-the-title-lots-more
+  * Handlebars.helpers.slugify('Stuff in the TiTlE & Lots More');
+  * @returns {string} slug
+  */
+  var slug = component.replace(/[^\w\s]+/gi, '').replace(/ +/gi, '-');
+
+  return slug.toLowerCase();
+
+});
+
+Handlebars.registerHelper('deslugify', function (component, options) {
+  if (!!component) {
+    var slug = component.replace(/-/g, " ");;
+    return slug.toLowerCase();    
+  }
+  return component;
+
+});
+
 (function(root) {
 
   'use strict';
@@ -164,158 +196,6 @@
       .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
       .replace(/\-\-+/g, '-');        // Replace multiple - with single -
     },
-
-  });
-
-})(this);
-
-(function(root) {
-
-  'use strict';
-
-  root.app = root.app || {};
-  root.app.View = root.app.View || {};
-  root.app.Model = root.app.Model || {};
-
-  // View for display results
-  root.app.View.FaqsView = Backbone.View.extend({
-
-    el: '#faqsView',
-
-    events: {
-      'click .toggle' : 'toggleFaq'
-    },
-
-    collection: new (Backbone.Collection.extend({
-
-      url: baseurl + '/json/faqs.json',
-
-      getGroups: function(filter,page) {
-        this.filter = filter;
-        if(!!this.filter && this.filter != 'all') {
-          this.collection = _.groupBy(_.sortBy(this.toJSON(), 'order'), 'app');
-          return _.compact(_.map(this.collection, function(group, k) {
-            if (k != this.filter) { return null; }
-            return _.sortBy(group,'order').slice(page*5, (page*5) + 5);
-          }.bind(this)));
-        } else {
-          this.collection = _.flatten(_.map(_.groupBy(_.sortBy(this.toJSON(), 'order'), 'app'), function(group){
-            return group
-          }.bind(this))).slice(page*5, (page*5) + 5);
-          return _.groupBy(this.collection, 'app');
-        }
-      },
-
-      getCount: function() {
-        if (!!this.filter && this.filter != 'all') {
-          var filtered = _.groupBy(this.toJSON(), 'app')[this.filter];
-          return (!!filtered) ? filtered.length : 0;
-        } else {
-          return this.toJSON().length;
-        }
-      }
-
-    })),
-
-    template: HandlebarsTemplates['faqs'],
-
-    initialize: function(settings) {
-      var opts = settings && settings.options ? settings.options : {};
-      this.options = _.extend({}, this.defaults, opts);
-      this.collection.fetch().done(function() {
-        this.setListeners();
-        this.render('all',0)
-      }.bind(this));
-    },
-
-    setListeners: function() {
-      Backbone.Events.on('faqs/filter', function(value) {
-        this.render(value, 0);
-      }.bind(this));
-    },
-
-    cache: function() {
-      this.$listItems = this.$el.find('.m-faqs-list li');
-      this.$paginationContainer = this.$el.find('.m-faqs-pagination');
-    },
-
-    render: function(filter,page) {
-      this.$el.html(this.template({
-        groups: this.collection.getGroups(filter,page)
-      }));
-      this.cache();
-      this.initPaginate(filter,page);
-    },
-
-    initPaginate: function(filter,page){
-      // pagination
-      this.$paginationContainer.pagination({
-        items: this.collection.getCount(),
-        itemsOnPage: 5,
-        currentPage: page + 1,
-        displayedPages: 3,
-        selectOnClick: false,
-        prevText: ' ',
-        nextText: ' ',
-        onPageClick: _.bind(function(page, e){
-          e && e.preventDefault();
-          this.render(filter,page-1)
-          this.$paginationContainer.pagination('drawPage', page);
-        }, this )
-      });
-    },
-
-    // Events
-    toggleFaq: function(e) {
-      var $parent = $(e.currentTarget).parent();
-      if ($parent.hasClass('-selected')) {
-        this.$listItems.removeClass('-selected');
-      } else {
-        this.$listItems.removeClass('-selected');
-        $parent.addClass('-selected');
-      }
-    },
-
-
-
-  });
-
-})(this);
-
-(function(root) {
-
-  'use strict';
-
-  root.app = root.app || {};
-  root.app.View = root.app.View || {};
-  root.app.Model = root.app.Model || {};
-
-  // View for display results
-  root.app.View.FaqsSelectView = Backbone.View.extend({
-
-    el: '#faqsSelectView',
-
-    events: {
-      'change select' : 'filterByApp'
-    },
-
-    initialize: function(settings) {
-      var opts = settings && settings.options ? settings.options : {};
-      this.options = _.extend({}, this.defaults, opts);
-      this.$select = this.$el.find('select');
-      this.initChosen();
-    },
-
-    initChosen: function() {
-      this.$select.chosen({
-        disable_search: true
-      });
-    },
-
-    filterByApp: function(e) {
-      var value = $(e.currentTarget).val();
-      Backbone.Events.trigger('faqs/filter', value);
-    }
 
   });
 
@@ -504,8 +384,6 @@
       // set width of each element
       this.$slider[0].addEventListener('before.lory.init', this.setSlideWidth.bind(this));
       this.$slider[0].addEventListener('on.lory.resize', this.setSlideWidth.bind(this));
-      this.$slider[0].addEventListener('after.lory.init', this.setNavigation.bind(this));
-      this.$slider[0].addEventListener('after.lory.slide', this.setNavigation.bind(this));
 
       this.slider = lory(this.$slider[0], this.options.slider);
     },
@@ -513,9 +391,9 @@
     setOptions: function() {
       this.cache();
       return {
-        slidesToScroll: (!!this.mobile) ? 1 : 2,
-        infinite: (!!this.mobile) ? 1 : 2,
-        slides_per_slide: (!!this.mobile) ? 1 : 2
+        slidesToScroll: (!!this.mobile) ? 1 : 3,
+        infinite: (!!this.mobile) ? 1 : 3,
+        slides_per_slide: (!!this.mobile) ? 1 : 3
       }
     },
 
@@ -528,7 +406,7 @@
       var pages = Math.ceil(this.slideCount/this.options.slider.slides_per_slide);
       var arrayPages =(function(a,b){while(a--)b[a]=a+1;return b})(pages,[]);
 
-      this.$sliderNavigation.html(this.navTemplate({pages: arrayPages}));
+      this.$sliderNavigation.html(this.navTemplate({pages: null}));
       this.$sliderNavigationItems = this.$sliderNavigation.find('li');
     },
 
@@ -551,17 +429,180 @@
       }
     },
 
-    // Events
-    setNavigation: function(e) {
-      e && e.preventDefault();
-      var current = 0;
-      if (this.slider) {
-        current = Math.ceil(this.slider.returnIndex()/2);
+  });
+
+})(this);
+
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
+  root.app.Model = root.app.Model || {};
+
+  // View for display results
+  root.app.View.StaticView = Backbone.View.extend({
+
+    el: '#staticView',
+
+    events: {
+      'click .m-static-title' : 'clickToggleContent',
+      'click .js-static-tab' : 'clickToggleAside'
+    },
+
+    model: new (Backbone.Model.extend({
+      defaults: {
+        tab: null,
+        tag: null
       }
-      // Set current
-      this.$sliderNavigationItems.removeClass('-active');
-      this.$sliderNavigation.find('li[data-index='+current+']').addClass('-active');
-    }
+    })),
+
+    collection: new (Backbone.Collection.extend({
+      parse: function(response) {
+        return _.map(response, function(r){
+          r.tags = this.slugify(r.tags);
+          return r;
+        }.bind(this))
+      },
+
+      getTabs: function() {
+        this.collection = _.pluck(_.sortBy(_.uniq(this.toJSON(),function(c) {
+          return c.tags_order && c.tags
+        }),'tags_order'), 'tags');
+
+        return this.collection;
+      },
+
+      getTags: function(tag) {
+        return _.sortBy(_.where(this.toJSON(), {'tags': tag}), 'order');
+      },
+
+      slugify: function(text) {
+        return text.toString().toLowerCase().trim()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/&/g, '-and-')         // Replace & with 'and'
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-');        // Replace multiple - with single -
+      },
+
+    })),
+
+    template: HandlebarsTemplates['static'],
+
+    initialize: function(settings) {
+      var opts = settings && settings.options ? settings.options : {};
+      this.options = _.extend({}, this.defaults, opts);
+      
+      this.collection.fetch({
+        url: baseurl + '/json/'+this.options.page+'.json'
+      }).done(function() {
+        this.setListeners();
+        this.render();
+        this.model.set(this.options);
+      }.bind(this));
+    },
+
+    setListeners: function() {
+      this.model.on('change:tab', this.render.bind(this));
+      this.model.on('change:tag', this.toggleContent.bind(this));
+
+      this.model.on('change:tab change:tag', this.updateRouter.bind(this));
+
+      $(document).on('scroll',_.bind(this.scrollDocument,this)); 
+    },
+
+    cache: function() {
+      this.$window = $(window);
+      this.$document = $(document);
+
+      this.$content = this.$el.find('.js-static-content');
+      this.$aside = this.$el.find('.js-static-aside'); 
+
+      this.$tabs = this.$el.find('.js-static-tab');
+      this.$tags = this.$el.find('.js-static-tag');
+    },
+
+    render: function() {
+      this.$el.html(this.template({
+        tabs: this.collection.getTabs(),
+        tags: this.collection.getTags(this.model.get('tab') || this.collection.getTabs()[0]),
+        tab: this.model.get('tab') || this.collection.getTabs()[0]
+      }));
+
+      this.afterRender();
+    },
+
+    afterRender: function() {
+      this.cache();
+      this.toggleContent();
+    },
+
+    // Aside
+    clickToggleAside: function(e) {
+      var new_tab = $(e.currentTarget).data('tab');
+      this.model.set('tag', null, { silent:true });
+      this.model.set('tab', new_tab);
+    },
+
+    // Content
+    clickToggleContent: function(e) {
+      var tag = this.model.get('tag');
+      var new_tag = $(e.currentTarget).data('tag');
+      this.model.set('tag', (new_tag != tag) ? new_tag : null)
+    },
+
+    toggleContent: function() {
+      var tab = this.model.get('tab') || this.collection.getTabs()[0],
+          tag = this.model.get('tag'),
+          tabEl = _.find(this.$tabs, function(e){
+            return (tab == $(e).data('tab'))
+          }),
+          tagEl = _.find(this.$tags, function(e){
+            return (tag == $(e).data('tag'))
+          });
+
+      this.$tabs.removeClass('-selected');
+      $(tabEl).addClass('-selected');
+
+      this.$tags.removeClass('-selected');
+      $(tagEl).addClass('-selected');
+
+      // To prevent a little blink issue with the aside box
+      this.scrollDocument();
+    },
+
+    updateRouter: function() {
+      var params = {
+        tab: this.model.get('tab') || this.collection.getTabs()[0],
+        tag: this.model.get('tag')
+      }
+      Backbone.Events.trigger('route/update', params);
+    },
+
+    // Scroll
+    setOffsets: function() {
+      var top = this.$content.offset().top;
+      this.model.set('offset', top);
+      this.model.set('offsetBottom', top + this.$content.innerHeight() - this.$aside.innerHeight());
+    },
+
+    scrollDocument: function(e){
+      this.setOffsets();
+      var scrollTop = this.$document.scrollTop();
+      if (scrollTop > this.model.get('offset')) {
+        this.$aside.addClass('-fixed');
+        if(scrollTop < this.model.get('offsetBottom')) {
+          this.$aside.removeClass('-bottom').addClass('-fixed');
+        }else{
+          this.$aside.removeClass('-fixed').addClass('-bottom');
+        }
+      }else{
+        this.$aside.removeClass('-fixed -bottom');
+      }
+    },
+
+
 
   });
 
@@ -651,8 +692,9 @@
     routes: {
       // HOME
       '': 'home',
-      // HOME
-      'faqs(/)': 'faqs',
+      // STATIC
+      'tutorials(/)': 'tutorials',
+      'about(/)': 'about',
       // APP
       'apps/:id(/)': 'category',
       //THEME
@@ -672,6 +714,16 @@
       this.options = _.extend({}, this.defaults, opts);
 
       this.params = new this.ParamsModel(); // This object save the URL params
+      this.setListeners();
+    },
+
+    setListeners: function() {
+      Backbone.Events.on('route/update', function(params) {
+        _.each(params,function(v,k){
+          this.setParams(k,v);
+        }.bind(this));
+        this.updateUrl();
+      }.bind(this));
     },
 
     /**
@@ -722,7 +774,7 @@
         } catch(err) {
           console.error('Invalid params. ' + err);
           params = null;
-          return this.navigate('map');
+          return this.navigate('');
         }
         this.params.clear({ silent: true }).set({ config: params });
       } else {
@@ -792,16 +844,17 @@
 
     initialize: function() {
       this.router = new root.app.Router();
-      this.setGlobalViews();
+      // this.setGlobalViews();
       this.setListeners();
     },
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
-      this.listenTo(this.router, 'route:faqs', this.faqsPage);
-      this.listenTo(this.router, 'route:category', this.appPage);
-      this.listenTo(this.router, 'route:tag', this.themePage);
-      this.listenTo(this.router, 'route:post', this.postPage);
+      this.listenTo(this.router, 'route:tutorials', this.tutorialsPage);
+      this.listenTo(this.router, 'route:about', this.aboutPage);
+      // this.listenTo(this.router, 'route:category', this.appPage);
+      // this.listenTo(this.router, 'route:tag', this.themePage);
+      // this.listenTo(this.router, 'route:post', this.postPage);
     },
 
     start: function() {
@@ -816,43 +869,53 @@
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     },
 
-    faqsPage: function() {
-      this.faqsView = new root.app.View.FaqsView();
-      this.faqsSelectView = new root.app.View.FaqsSelectView();
-      this.asideView = new root.app.View.AsideView({ options: { model: { id: 'faqs' }}});
-    },
-
-    appPage: function(id) {
-      this.sliderView = new root.app.View.SliderView();
-      this.asideView = new root.app.View.AsideView({
-        options: {
-          model: {
-            id: id
-          }
-        }
+    tutorialsPage: function() {
+      this.staticView = new root.app.View.StaticView({
+        options: _.extend(this.router._unserializeParams(),{
+          page: 'tutorials'
+        })
       });
     },
 
-    themePage: function(id) {
-      this.sliderView = new root.app.View.SliderView();
-      this.asideView = new root.app.View.AsideView({
-        options: {
-          model: {
-            id: id
-          }
-        }
+    aboutPage: function() {
+      this.staticView = new root.app.View.StaticView({
+        options: _.extend(this.router._unserializeParams(),{
+          page: 'about'
+        })
       });
     },
 
-    postPage: function() {
-      this.toggleView = new root.app.View.ToggleView();
-      this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
-    },
+    // appPage: function(id) {
+    //   this.sliderView = new root.app.View.SliderView();
+    //   this.asideView = new root.app.View.AsideView({
+    //     options: {
+    //       model: {
+    //         id: id
+    //       }
+    //     }
+    //   });
+    // },
 
-    setGlobalViews: function() {
-      // this.blogView = new root.app.View.BlogView();
-      // this.searchView = new root.app.View.SearchView();
-    }
+    // themePage: function(id) {
+    //   this.sliderView = new root.app.View.SliderView();
+    //   this.asideView = new root.app.View.AsideView({
+    //     options: {
+    //       model: {
+    //         id: id
+    //       }
+    //     }
+    //   });
+    // },
+
+    // postPage: function() {
+    //   this.toggleView = new root.app.View.ToggleView();
+    //   this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
+    // },
+
+    // setGlobalViews: function() {
+    //   this.blogView = new root.app.View.BlogView();
+    //   this.searchView = new root.app.View.SearchView();
+    // }
 
   });
 

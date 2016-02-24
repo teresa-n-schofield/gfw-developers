@@ -10,12 +10,12 @@
     } ,
   
     {
-      "title"    : "Test faq GFW 6",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-gfw.html",
-      "date"     : "2001-01-06 00:00:00 +0100",
-      "content"  : "GFW aims3 to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "title"    : "Creating your own map 2",
+      "category" : "tutorials",
+      "tags"     : "creating your own map",
+      "url"      : "/gfw-atlas/tutorials/creating-your-own-map2.html",
+      "date"     : "2001-01-05 00:00:00 +0100",
+      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
     } ,
   
     {
@@ -28,12 +28,12 @@
     } ,
   
     {
-      "title"    : "Test faq GFW 5",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-gfw.html",
-      "date"     : "2001-01-05 00:00:00 +0100",
-      "content"  : "GFW aims3 to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "title"    : "Creating your own map 1",
+      "category" : "tutorials",
+      "tags"     : "creating your own map",
+      "url"      : "/gfw-atlas/tutorials/creating-your-own-map1.html",
+      "date"     : "2001-01-04 00:00:00 +0100",
+      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
     } ,
   
     {
@@ -46,11 +46,11 @@
     } ,
   
     {
-      "title"    : "Test GFW 4",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-gfw4.html",
-      "date"     : "2001-01-04 00:00:00 +0100",
+      "title"    : "Changing the basemap",
+      "category" : "tutorials",
+      "tags"     : "using the interface",
+      "url"      : "/gfw-atlas/tutorials/changing-the-basemap.html",
+      "date"     : "2001-01-03 00:00:00 +0100",
       "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
     } ,
   
@@ -73,21 +73,12 @@
     } ,
   
     {
-      "title"    : "What updates are coming down the road for GFW?",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-gfw3.html",
-      "date"     : "2001-01-03 00:00:00 +0100",
+      "title"    : "Toggling data layers",
+      "category" : "tutorials",
+      "tags"     : "using the interface",
+      "url"      : "/gfw-atlas/tutorials/toggling-data-layers.html",
+      "date"     : "2001-01-02 00:00:00 +0100",
       "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
-    } ,
-  
-    {
-      "title"    : "Test faq Climate 3",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-climate3.html",
-      "date"     : "2001-01-03 00:00:00 +0100",
-      "content"  : "GFW aims3 to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
     } ,
   
     {
@@ -109,20 +100,11 @@
     } ,
   
     {
-      "title"    : "Who is behind global forest watch?",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-gfw2.html",
-      "date"     : "2001-01-02 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
-    } ,
-  
-    {
-      "title"    : "Test faq Climate 2",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-climate2.html",
-      "date"     : "2001-01-02 00:00:00 +0100",
+      "title"    : "Interface Overview",
+      "category" : "tutorials",
+      "tags"     : "using the interface",
+      "url"      : "/gfw-atlas/tutorials/using-interface.html",
+      "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
     } ,
   
@@ -154,28 +136,10 @@
     } ,
   
     {
-      "title"    : "Who can use global forest watch?",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-gfw1.html",
-      "date"     : "2001-01-01 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
-    } ,
-  
-    {
-      "title"    : "Test faq Fires",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-fires1.html",
-      "date"     : "2001-01-01 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
-    } ,
-  
-    {
-      "title"    : "Test faq Climate",
-      "category" : "about, faqs",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/about/faqs/faq-climate1.html",
+      "title"    : "The project",
+      "category" : "about",
+      "tags"     : "the project",
+      "url"      : "/gfw-atlas/about/the-project.html",
       "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
     } 
@@ -193,7 +157,7 @@
         "tags"     : "",
         "url"      : "/gfw-atlas/about/",
         "date"     : "",
-        "content"  : "        About the project    MY Forest Watch is a powerful tool for Governments, NGOs and the private sector to build a living, dynamic forest monitoring system that provides unbiased and up-to-date information on forest dynamics within their focus areas. Build on ArcGIS online and powered by the Global Forest Watch API this platform allows everyone to build their own localized version of Global Forest Watch using their own data layers and integrate within their own website. Explore the gallery to see how others use this platform and watch the tutorial videos to learn how to build your own.  "
+        "content"  : "			  About the project	  Etiam varius felis quis libero pulvinar, et aliquet ipsum suscipit. Sed sit amet lectus eget leo blandit aliquet. Aliquam sollicitudin magna lacus, ut interdum mauris commodo ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus.	"
      
    } ,
   
@@ -226,7 +190,11 @@
         "tags"     : "",
         "url"      : "/gfw-atlas/",
         "date"     : "",
-        "content"  : "																												My forest atlas						Make maps that matters						Get started																							About the platform			My Forest Atlas is a powerful tool for a living, dynamic forest monitoring system that provides unbiased and up-to-date information on the DRC's forest sector. Built on a geographic information system (GIS) platform, the Atlas aims to strengthen forest management and land use planning by bringing information on all major land use categories onto the same standardized platform.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch - or upload your own.														Powerful analysis				Run advanced statistical and geospatial analyses, right in the browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add it to the forest atlas gallery.										About the project			"
+        "content"  : "																												My forest atlas						Make maps that matters						Get started																							About the platform			My Forest Atlas is a powerful tool for a living, dynamic forest monitoring system that provides unbiased and up-to-date information on the DRC's forest sector. Built on a geographic information system (GIS) platform, the Atlas aims to strengthen forest management and land use planning by bringing information on all major land use categories onto the same standardized platform.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch - or upload your own.														Powerful analysis				Run advanced statistical and geospatial analyses, right in the browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add it to the forest atlas gallery.										About the project											Build your own Atlas			Follow these simple steps to get up and running in minutes. Mauris at laoreet enim, at luctus nisi. Vestibulum at orci et sem scelerisque prottitor. Interger fringilla ultrices congue. Nam at sodales sapien.											1				Watch the tutorial videos				These step-by-step guides will teach you how to set up an ArcGIS Online user acount, produce a basic interactive map, and share your custom forest atlas.										2				Create a map				Add data layers to the map canvas, and stylize them appropriately. All of your progress will be saved to your account, so you can work at your own pace.										3				Share your forest atlas				Use integrated social media tools to share interactive forest atlas with your networks, export the map as a static image, or submit it into the forest atlas gallery.										Get started											Featured Forest Atlases			A hand-curated selection of... Sed nec laoreet nulla, ut sagittis justo. Aliquam pellentesque blandit erat quis convallis. Cras vel libero sed diam hendrerit viverra at sagittis ex. Proin sed diam tincidunt, convallis dui at, volutpat tellus.																					  					  					  																		Mining and deforestation in british columbia								These step-by-step guides will teach you how to set up an ArcGIS Online user acount, produce a basic interactive map, and share your custom forest atlas.					  						  						  					  					  					  																		Mining and deforestation in british columbia								These step-by-step guides will teach you how to set up an ArcGIS Online user acount, produce a basic interactive map, and share your custom forest atlas.					  						  						  					  					  					  																		Tree cover gain and carbon stocks in the american south								These step-by-step guides will teach you how to set up an ArcGIS Online user acount, produce a basic interactive map, and share your custom forest atlas.					  						  						  					  					  					  																		Mining and deforestation in british columbia								These step-by-step guides will teach you how to set up an ArcGIS Online user acount, produce a basic interactive map, and share your custom forest atlas.					  						  						  					  					  					  																		Tree cover gain and carbon stocks in the american south								These step-by-step guides will teach you how to set up an ArcGIS Online user acount, produce a basic interactive map, and share your custom forest atlas.					  						  						  					  					  					  																		Watch the tutorial videos								These step-by-step guides will teach you how to set up an ArcGIS Online user acount, produce a basic interactive map, and share your custom forest atlas.					  						  						  																								Submit your forest atlas			View all			"
+     
+   } ,
+  
+   {
      
    } ,
   
