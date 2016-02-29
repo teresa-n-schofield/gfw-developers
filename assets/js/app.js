@@ -26,14 +26,15 @@
 
     initialize: function() {
       this.router = new root.app.Router();
-      // this.setGlobalViews();
       this.setListeners();
     },
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
-      this.listenTo(this.router, 'route:about', this.aboutPage);
+      this.listenTo(this.router, 'route:gallery', this.galleryPage);
+      this.listenTo(this.router, 'route:develop', this.developPage);
+      
       // this.listenTo(this.router, 'route:category', this.appPage);
       // this.listenTo(this.router, 'route:tag', this.themePage);
       // this.listenTo(this.router, 'route:post', this.postPage);
@@ -44,6 +45,8 @@
         pushState: true,
         root: (!!baseurl) ? baseurl : "/"
       });
+
+      this.setGlobalViews();
     },
 
     homePage: function() {
@@ -61,7 +64,12 @@
         el: '#tutorialsSliderView'
       });
       this.videoModalView = new root.app.View.ModalVideoView();
+    },
 
+    galleryPage: function() {
+      this.galleryView = new root.app.View.GalleryView({
+
+      })
     },
 
     tutorialsPage: function() {
@@ -72,10 +80,10 @@
       });
     },
 
-    aboutPage: function() {
+    developPage: function() {
       this.staticView = new root.app.View.StaticView({
         options: _.extend(this.router._unserializeParams(),{
-          page: 'about'
+          page: 'develop'
         })
       });
     },
@@ -107,10 +115,15 @@
     //   this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     // },
 
-    // setGlobalViews: function() {
-    //   this.blogView = new root.app.View.BlogView();
-    //   this.searchView = new root.app.View.SearchView();
-    // }
+    setGlobalViews: function() {
+
+      var fragment = (!!Backbone.history.fragment) ? Backbone.history.fragment.replace(/\//g,'') : null;
+      this.menuView = new root.app.View.MenuView({
+        options: {
+          page: fragment
+        }
+      });
+    }
 
   });
 

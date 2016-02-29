@@ -207,6 +207,165 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
   root.app = root.app || {};
   root.app.View = root.app.View || {};
+  root.app.Collection = root.app.Collection || {};
+
+  root.app.Collection.GalleryCollection = Backbone.Collection.extend({
+    url: baseurl + '/json/gallery.json',
+    
+    comparator: function(item) {
+      return parseInt(item.get("order"))
+    },
+
+    getPaginatedCollection: function(currentPage,itemsOnPage,filter) {
+      var filteredCollection = (filter == 'all') ? this.toJSON() : this.filter(filter);
+      return filteredCollection.slice(currentPage*itemsOnPage, (currentPage*itemsOnPage) + itemsOnPage)
+    },
+
+    getCount: function(filter) {
+      var filteredCollection = (filter == 'all') ? this.toJSON() : this.filter(filter);
+      return filteredCollection.length;
+    },
+
+    filter: function(filter) {
+      return _.compact(_.map(this.toJSON(), function(v){
+        return (v.filter == filter) ? v : null
+      }))
+    }
+
+  });
+
+
+  // View for display results
+  root.app.View.GalleryView = Backbone.View.extend({
+
+    el: '#galleryView',
+
+    template: HandlebarsTemplates['gallery'],
+
+    model: new (Backbone.Model.extend({
+      defaults: {
+        currentPage: 0,
+        itemsOnPage: 5,
+        filter: 'all'
+      }
+    })),
+
+    events: {
+      'change #gallery-filter' : 'changeFilter'
+    },
+
+    initialize: function() {
+      this.setListeners();
+      
+      // Fetch collection
+      this.collection = new root.app.Collection.GalleryCollection();
+      this.collection.fetch().done(function(){
+        this.render();
+      }.bind(this));
+    },
+
+    setListeners: function() {
+      this.model.on('change:currentPage', this.render.bind(this));
+      this.model.on('change:filter', this.render.bind(this));
+    },
+
+    render: function() {
+      this.$el.html(this.template({
+        gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),
+        gallery_length: this.collection.getCount(this.model.get('filter'))
+      }));
+
+      this.cache();
+
+      this.initPaginate();
+      this.initChosen();
+    },
+
+    cache: function() {
+      this.$paginator = this.$el.find('#gallery-paginator');
+      this.$filters = this.$el.find('#gallery-filter');
+    },
+
+    // Inits after render
+    initPaginate: function(){
+      // pagination
+      this.$paginator.pagination({
+        items: this.collection.getCount(this.model.get('filter')),
+        itemsOnPage: this.model.get('itemsOnPage'),
+        currentPage: this.model.get('currentPage') + 1,
+        displayedPages: 3,
+        edges: 1,
+        selectOnClick: false,
+        prevText: ' ',
+        nextText: ' ',
+        onPageClick: _.bind(function(page, e){
+          e && e.preventDefault();
+          this.$paginator.pagination('drawPage', page);
+          this.model.set('currentPage', page-1);
+        }, this )
+      });
+    },
+
+    initChosen: function() {
+      this.$filters.val(this.model.get('filter'));
+
+      // chosen
+      this.$filters.chosen({
+        disable_search: true
+      });
+    },
+
+    changeFilter: function(e) {
+      this.model.set('currentPage', 0, { silent:true })
+      this.model.set('filter', $(e.currentTarget).val());
+    }
+
+  });
+
+})(this);
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
+
+  // View for display results
+  root.app.View.MenuView = Backbone.View.extend({
+
+    el: '#menuView',
+
+    initialize: function(settings) {
+      var opts = settings && settings.options ? settings.options : {};
+      this.options = _.extend({}, this.defaults, opts);
+
+      this.cache();
+      this.setSelectedMenu();
+    },
+
+    cache: function() {
+      this.$links = $('#menuView a');
+    },
+
+    setSelectedMenu: function() {
+      if (!!this.options.page) {      
+        _.each(this.$links, function(link){
+          if (~this.options.page.indexOf(link.dataset.page)) {
+            $(link).addClass('-selected');
+          }
+        }.bind(this));
+      }
+    }
+
+  });
+
+})(this);
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
   root.app.Model = root.app.Model || {};
 
   root.app.Model.ModalModel = Backbone.Model.extend({
@@ -269,7 +428,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       (!!this.model.get('hidden')) ? this._stopBindings() : this._initBindings();
       this.$el.toggleClass('-active', !this.model.get('hidden'));
       //Prevent scroll beyond modal window.
-      this.$htmlbody.toggleClass('-no-scroll', !this.model.get('hidden'));
+      this.$htmlbody.toggleClass('-no-scroll-allowed', !this.model.get('hidden'));
     },
 
     hide: function(e) {
@@ -277,7 +436,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.model.set('hidden', true);
 
       //Give back scroll beyond modal window.
-      this.$htmlbody.removeClass('-no-scroll');
+      this.$htmlbody.removeClass('-no-scroll-allowed');
 
       return this;
     },
@@ -370,7 +529,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.player.stopVideo();
 
       //Give back scroll beyond modal window.
-      this.$htmlbody.removeClass('-no-scroll');
+      this.$htmlbody.removeClass('-no-scroll-allowed');
 
       return this;
     },
@@ -566,7 +725,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.$slider[0].addEventListener('before.lory.init', this.setSlideWidth.bind(this));
       this.$slider[0].addEventListener('on.lory.resize', this.setSlideWidth.bind(this));
 
-      this.slider = lory(this.$slider[0], this.options.slider);
+      this.slider = window.lory.lory(this.$slider[0], this.options.slider);
     },
 
     setOptions: function() {
@@ -873,18 +1032,20 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     routes: {
       // HOME
       '': 'home',
-      // STATIC
-      'tutorials(/)': 'tutorials',
+      // MAP BUILDER      
       'map-builder(/)': 'map-builder',
-      // APP
-      'apps/:id(/)': 'category',
-      //THEME
-      'themes/:id(/)': 'tag',
-      // POST
-      'gfw/:id' : 'post',
-      'climate/:id' : 'post',
-      'fires/:id' : 'post',
-      'commodities/:id' : 'post',
+      'map-builder(/)gallery(/)': 'gallery',
+      // DEVELOP YOUR OWN APP
+      'develop-your-own-app(/)': 'develop',
+      // // APP
+      // 'apps/:id(/)': 'category',
+      // //THEME
+      // 'themes/:id(/)': 'tag',
+      // // POST
+      // 'gfw/:id' : 'post',
+      // 'climate/:id' : 'post',
+      // 'fires/:id' : 'post',
+      // 'commodities/:id' : 'post',
 
     },
 
@@ -1025,14 +1186,15 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     initialize: function() {
       this.router = new root.app.Router();
-      // this.setGlobalViews();
       this.setListeners();
     },
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
-      this.listenTo(this.router, 'route:about', this.aboutPage);
+      this.listenTo(this.router, 'route:gallery', this.galleryPage);
+      this.listenTo(this.router, 'route:develop', this.developPage);
+      
       // this.listenTo(this.router, 'route:category', this.appPage);
       // this.listenTo(this.router, 'route:tag', this.themePage);
       // this.listenTo(this.router, 'route:post', this.postPage);
@@ -1043,6 +1205,8 @@ Handlebars.registerHelper('deslugify', function (component, options) {
         pushState: true,
         root: (!!baseurl) ? baseurl : "/"
       });
+
+      this.setGlobalViews();
     },
 
     homePage: function() {
@@ -1060,7 +1224,12 @@ Handlebars.registerHelper('deslugify', function (component, options) {
         el: '#tutorialsSliderView'
       });
       this.videoModalView = new root.app.View.ModalVideoView();
+    },
 
+    galleryPage: function() {
+      this.galleryView = new root.app.View.GalleryView({
+
+      })
     },
 
     tutorialsPage: function() {
@@ -1071,10 +1240,10 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       });
     },
 
-    aboutPage: function() {
+    developPage: function() {
       this.staticView = new root.app.View.StaticView({
         options: _.extend(this.router._unserializeParams(),{
-          page: 'about'
+          page: 'develop'
         })
       });
     },
@@ -1106,10 +1275,15 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     //   this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     // },
 
-    // setGlobalViews: function() {
-    //   this.blogView = new root.app.View.BlogView();
-    //   this.searchView = new root.app.View.SearchView();
-    // }
+    setGlobalViews: function() {
+
+      var fragment = (!!Backbone.history.fragment) ? Backbone.history.fragment.replace(/\//g,'') : null;
+      this.menuView = new root.app.View.MenuView({
+        options: {
+          page: fragment
+        }
+      });
+    }
 
   });
 
