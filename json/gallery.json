@@ -2,9 +2,9 @@
   
     {
       "title"         : "Atlas 10",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas10.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas10.html",
       "date"          : "2001-01-10 00:00:00 +0100",
       "order"         : "10",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas9.jpg",
@@ -15,9 +15,9 @@
   
     {
       "title"         : "Atlas 9",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas9.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas9.html",
       "date"          : "2001-01-09 00:00:00 +0100",
       "order"         : "9",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas9.jpg",
@@ -28,9 +28,9 @@
   
     {
       "title"         : "Atlas 8",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas8.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas8.html",
       "date"          : "2001-01-08 00:00:00 +0100",
       "order"         : "8",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas8.jpg",
@@ -41,9 +41,9 @@
   
     {
       "title"         : "Atlas 7",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas7.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas7.html",
       "date"          : "2001-01-07 00:00:00 +0100",
       "order"         : "7",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas7.jpg",
@@ -54,9 +54,9 @@
   
     {
       "title"         : "Atlas 6",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas6.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas6.html",
       "date"          : "2001-01-06 00:00:00 +0100",
       "order"         : "6",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas6.jpg",
@@ -67,9 +67,9 @@
   
     {
       "title"         : "Atlas 5",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas5.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas5.html",
       "date"          : "2001-01-05 00:00:00 +0100",
       "order"         : "5",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas5.jpg",
@@ -80,9 +80,9 @@
   
     {
       "title"         : "Atlas 4",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas4.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas4.html",
       "date"          : "2001-01-04 00:00:00 +0100",
       "order"         : "4",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas4.jpg",
@@ -93,9 +93,9 @@
   
     {
       "title"         : "Atlas 3",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas3.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas3.html",
       "date"          : "2001-01-03 00:00:00 +0100",
       "order"         : "3",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas3.jpg",
@@ -106,9 +106,9 @@
   
     {
       "title"         : "Atlas 2",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas2.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas2.html",
       "date"          : "2001-01-02 00:00:00 +0100",
       "order"         : "2",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas2.jpg",
@@ -119,9 +119,9 @@
   
     {
       "title"         : "Atlas 1",
-      "category"      : "map-builder, gallery",
+      "category"      : "gallery",
       "tags"          : "",
-      "url"           : "/gfw-atlas/map-builder/gallery/gallery-atlas1.html",
+      "url"           : "/gfw-atlas/gallery/gallery-atlas1.html",
       "date"          : "2001-01-01 00:00:00 +0100",
       "order"         : "1",
       "thumbnail"     : "/gfw-atlas/assets/images/gallery/atlas1.jpg",
