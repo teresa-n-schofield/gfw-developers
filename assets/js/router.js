@@ -73,6 +73,7 @@
      */
     updateUrl: function() {
       var serializedParams = (!!this._serializeParams()) ? '?' + this._serializeParams() : '';
+      console.log(location.pathname);
       var url = location.pathname.slice(1) + serializedParams;
       this.navigate(url, { trigger: false });
     },
