@@ -260,7 +260,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       // Fetch collection
       this.collection = new root.app.Collection.GalleryCollection();
       this.collection.fetch().done(function(){
-        this.render();
+        this.render(false);
       }.bind(this));
     },
 
@@ -269,8 +269,10 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.model.on('change:filter', this.render.bind(this));
     },
 
-    render: function() {
-      this.scrollToTop();
+    render: function(dont_scroll) {
+      if (!!dont_scroll) {
+        this.scrollToTop();
+      }
 
       this.$el.html(this.template({
         gallery: this.collection.getPaginatedCollection(this.model.get('currentPage'),this.model.get('itemsOnPage'),this.model.get('filter')),
@@ -796,7 +798,9 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     events: {
       'click .m-static-title' : 'clickToggleContent',
-      'click .js-static-tab' : 'clickToggleAside'
+      'click .js-static-tab' : 'clickToggleAside',
+      'click .js-static-page' : 'clickGoToTop',
+      'click .js-static-content-close' : 'clickCloseCount'
     },
 
     model: new (Backbone.Model.extend({
@@ -841,6 +845,18 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
+
+      enquire.register("screen and (min-width: 850px)", {
+        match: function(){
+          this.mobile = false;
+        }.bind(this)
+      });
+      enquire.register("screen and (max-width: 850px)", {
+        match: function(){
+          this.mobile = true;
+        }.bind(this)
+      });
+
       
       this.collection.fetch({
         url: baseurl + '/json/'+this.options.page+'.json'
@@ -857,7 +873,9 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
       this.model.on('change:tab change:tag', this.updateRouter.bind(this));
 
-      $(document).on('scroll',_.bind(this.scrollDocument,this)); 
+      if (!this.mobile) {
+        $(document).on('scroll',_.bind(this.scrollDocument,this)); 
+      }
     },
 
     cache: function() {
@@ -875,7 +893,9 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.$el.html(this.template({
         tabs: this.collection.getTabs(),
         tags: this.collection.getTags(this.model.get('tab') || this.collection.getTabs()[0]),
-        tab: this.model.get('tab') || this.collection.getTabs()[0]
+        tab: this.model.get('tab') || this.collection.getTabs()[0],
+        pageName: this.options.pageName,
+        uniq: (this.collection.getTags(this.model.get('tab')).length == 1) ? true : false
       }));
 
       this.afterRender();
@@ -893,6 +913,13 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.model.set('tab', new_tab);
     },
 
+    clickGoToTop: function(e) {
+      e && e.preventDefault();
+      $('html,body').animate({
+        scrollTop: 0
+      }, 250);
+    },
+
     // Content
     clickToggleContent: function(e) {
       var tag = this.model.get('tag');
@@ -900,8 +927,14 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.model.set('tag', (new_tag != tag) ? new_tag : null)
     },
 
+    clickCloseCount: function(e) {
+      e && e.preventDefault();
+      this.model.set('tag', null);
+      this.model.set('tab', null);            
+    },
+
     toggleContent: function() {
-      var tab = this.model.get('tab') || this.collection.getTabs()[0],
+      var tab = (!this.mobile) ? this.model.get('tab') || this.collection.getTabs()[0] : this.model.get('tab') || null,
           tag = this.model.get('tag'),
           tabEl = _.find(this.$tabs, function(e){
             return (tab == $(e).data('tab'))
@@ -918,11 +951,19 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
       // To prevent a little blink issue with the aside box
       this.scrollDocument();
+
+      // Mobile behaviour
+      if (!!this.model.get('tab')) {
+        this.$content.addClass('-active');
+        (this.mobile) ? $('html,body').addClass('-no-scroll-allowed') : null;
+      } else {
+        (this.mobile) ? $('html,body').removeClass('-no-scroll-allowed') : null;
+      }
     },
 
     updateRouter: function() {
       var params = {
-        tab: this.model.get('tab') || this.collection.getTabs()[0],
+        tab: (!this.mobile) ? this.model.get('tab') || this.collection.getTabs()[0] : this.model.get('tab') || null,
         tag: this.model.get('tag')
       }
       Backbone.Events.trigger('route/update', params);
@@ -1081,7 +1122,11 @@ Handlebars.registerHelper('deslugify', function (component, options) {
           // var params = _.pick(value, 'id', 'opacity', 'order');
           // this.params.set(name, JSON.stringify(params));
         } else {
-          this.params.set(name, JSON.stringify(value));
+          if (!!value) {
+            this.params.set(name, JSON.stringify(value));
+          } else {
+            this.params.set(name, value);
+          }
         }
       } else if (typeof value === 'object' && _.isArray(value)) {
         if (keys && _.isArray(keys)) {
@@ -1099,7 +1144,8 @@ Handlebars.registerHelper('deslugify', function (component, options) {
      * Change url with params
      */
     updateUrl: function() {
-      var url = location.pathname.slice(1) + '?' + this._serializeParams();
+      var serializedParams = (!!this._serializeParams()) ? '?' + this._serializeParams() : '';
+      var url = location.pathname.slice(1) + serializedParams;
       this.navigate(url, { trigger: false });
     },
 
@@ -1145,12 +1191,22 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       return params;
     },
 
+
     /**
      * Transform object params to URL string
      * @return {String}
      */
     _serializeParams: function() {
-      return this.params ? $.param(this.params.attributes) : null;
+      if (!!this.params) {
+        var str = [];
+        var obj = this.params.attributes;
+        for(var p in obj) {          
+          if (obj.hasOwnProperty(p) && !!obj[p]) {
+            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+          }
+        }
+        return str.join("&");
+      }
     }
 
   });
@@ -1192,11 +1248,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:map-builder', this.mapBuilderPage);
       this.listenTo(this.router, 'route:gallery', this.galleryPage);
-      this.listenTo(this.router, 'route:develop', this.developPage);
-      
-      // this.listenTo(this.router, 'route:category', this.appPage);
-      // this.listenTo(this.router, 'route:tag', this.themePage);
-      // this.listenTo(this.router, 'route:post', this.postPage);
+      this.listenTo(this.router, 'route:develop', this.developPage);      
     },
 
     start: function() {
@@ -1251,7 +1303,8 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     developPage: function() {
       this.staticView = new root.app.View.StaticView({
         options: _.extend(this.router._unserializeParams(),{
-          page: 'develop'
+          page: 'develop',
+          pageName: 'Develop your own app'
         })
       });
     },

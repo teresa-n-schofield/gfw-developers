@@ -50,7 +50,11 @@
           // var params = _.pick(value, 'id', 'opacity', 'order');
           // this.params.set(name, JSON.stringify(params));
         } else {
-          this.params.set(name, JSON.stringify(value));
+          if (!!value) {
+            this.params.set(name, JSON.stringify(value));
+          } else {
+            this.params.set(name, value);
+          }
         }
       } else if (typeof value === 'object' && _.isArray(value)) {
         if (keys && _.isArray(keys)) {
@@ -68,7 +72,8 @@
      * Change url with params
      */
     updateUrl: function() {
-      var url = location.pathname.slice(1) + '?' + this._serializeParams();
+      var serializedParams = (!!this._serializeParams()) ? '?' + this._serializeParams() : '';
+      var url = location.pathname.slice(1) + serializedParams;
       this.navigate(url, { trigger: false });
     },
 
@@ -114,12 +119,22 @@
       return params;
     },
 
+
     /**
      * Transform object params to URL string
      * @return {String}
      */
     _serializeParams: function() {
-      return this.params ? $.param(this.params.attributes) : null;
+      if (!!this.params) {
+        var str = [];
+        var obj = this.params.attributes;
+        for(var p in obj) {          
+          if (obj.hasOwnProperty(p) && !!obj[p]) {
+            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+          }
+        }
+        return str.join("&");
+      }
     }
 
   });
