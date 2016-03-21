@@ -2,10 +2,10 @@
   
     {
       "title"      : "Style Guide",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/style-guide.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/style-guide.html",
       "date"       : "2001-03-08 00:00:00 +0100",
       "order"      : "8",
       "content"    : "<p>What developers need to know before they build a GFW app</p>\n<p><a href=\"http://vizzuality.github.io/gfw-style-guides/\">http://vizzuality.github.io/gfw-style-guides/</a></p>\n"
@@ -13,10 +13,10 @@
   
     {
       "title"      : "Carbon Loss API",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/carbon-api.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/carbon-api.html",
       "date"       : "2001-03-07 00:00:00 +0100",
       "order"      : "7",
       "content"    : "<p>Works similar to the forest change API.</p>\n<p>Currently only ARCGIS API, Wrapper under development.</p>\n<p>Not yet documented.</p>\n"
@@ -24,10 +24,10 @@
   
     {
       "title"      : "Land Cover API",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/lancover-api.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/lancover-api.html",
       "date"       : "2001-03-06 00:00:00 +0100",
       "order"      : "6",
       "content"    : "<p>Works similar to the forest change API.</p>\n<p>Currently only ARCGIS API, Wrapper under development.</p>\n<p>Not yet documented.</p>\n"
@@ -35,10 +35,10 @@
   
     {
       "title"      : "Forest Change by Landcover API",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/forest-change-biomass-api.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/forest-change-biomass-api.html",
       "date"       : "2001-03-05 00:00:00 +0100",
       "order"      : "4",
       "content"    : "<p>Works similar to the forest change API.</p>\n<p>Currently only ARCGIS API, Wrapper under development.</p>\n<p>Not yet documented.</p>\n"
@@ -46,10 +46,10 @@
   
     {
       "title"      : "Forest Change by Landcover API",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/forest-change-landcover-api.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/forest-change-landcover-api.html",
       "date"       : "2001-03-04 00:00:00 +0100",
       "order"      : "4",
       "content"    : "<p>Works similar to the forest change API.</p>\n<p>Currently only ARCGIS API, Wrapper under development.</p>\n<p>Not yet documented.</p>\n"
@@ -57,10 +57,10 @@
   
     {
       "title"      : "My Global Forest Watch API",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/my-gfw-api.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/my-gfw-api.html",
       "date"       : "2001-03-03 00:00:00 +0100",
       "order"      : "3",
       "content"    : "<p>Subscribe to GFW alerts and manage your subscriptions using this API. This will allow users to access their subscriptions through other apps.</p>\n<p>Under development.</p>\n"
@@ -68,10 +68,10 @@
   
     {
       "title"      : "Metadata API",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/metadata-api.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/metadata-api.html",
       "date"       : "2001-03-02 00:00:00 +0100",
       "order"      : "2",
       "content"    : "<p><a href=\"http://api.globalforestwatch.org/metadata\">http://api.globalforestwatch.org/metadata</a></p>\n<p>Retrieve full metadata for all GFW layers as JSON object. Soon also as XML object in ArcGIS, ISO and FGDC standard to use.</p>\n<p>(Not yet documented)</p>\n"
@@ -79,10 +79,10 @@
   
     {
       "title"      : "Forest Change API",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/forest-change-api.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/forest-change-api.html",
       "date"       : "2001-03-01 00:00:00 +0100",
       "order"      : "1",
       "content"    : "<p><a href=\"http://api.globalforestwatch.org/forest-change\">http://api.globalforestwatch.org/forest-change</a></p>\n<p>Users can make calls to the GFW API and receive statistics on:</p>\n<ul>\n\t<li>University of Maryland (UMD)/Google tree cover loss &amp; gain</li>\n\t<li>FORMA alerts</li>\n\t<li>IMAZON SAD alerts</li>\n\t<li>QUICC alerts</li>\n\t<li>Terra-i alerts</li>\n\t<li>NASA active fires</li>\n</ul>\n<p>They can post their own geometry, or use predefined geometries such as administrative boundaries, concessions or protected areas.</p>\n<p>They can also specify the time period for they are interested in.</p>\n<p>Full documentation of the calls are here</p>\n<p><a href=\"https://github.com/wri/gfw-api\">https://github.com/wri/gfw-api</a></p>\n"
@@ -90,10 +90,10 @@
   
     {
       "title"      : "Library 2",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "client library",
       "tags_order" : "2",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/client-library-library2.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/client-library-library2.html",
       "date"       : "2001-02-02 00:00:00 +0100",
       "order"      : "2",
       "content"    : "<h3>Nam dolor ante, condimentum at ante sit amet, aliquam rhoncus augue. Praesent ut pellentesque quam. Sed dapibus, purus dignissim rutrum blandit, lorem lectus venenatis felis, quis egestas tortor lectus in neque hiperpon espasiva.  Cras vel libero sed diam hendrerit viverra at sagittis ex. Proin sed diam tincidunt, convallis dui at, volutpat tellus.</h3>\n<p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>\n<ul>\n  <li>Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.</li>\n  <li>Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.</li>\n  <li>NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.</li>\n  <li>Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.</li>\n  <li>Media can gather evidence, data, and graphics for reporting.</li>\n  <li>Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.</li>\n  <li>Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales.</li>\n</ul>\n"
@@ -101,10 +101,10 @@
   
     {
       "title"      : "Library 1",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "client library",
       "tags_order" : "2",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/client-library-library1.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/client-library-library1.html",
       "date"       : "2001-02-01 00:00:00 +0100",
       "order"      : "1",
       "content"    : "<h3>Nam dolor ante, condimentum at ante sit amet, aliquam rhoncus augue. Praesent ut pellentesque quam. Sed dapibus, purus dignissim rutrum blandit, lorem lectus venenatis felis, quis egestas tortor lectus in neque hiperpon espasiva.  Cras vel libero sed diam hendrerit viverra at sagittis ex. Proin sed diam tincidunt, convallis dui at, volutpat tellus.</h3>\n<p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>\n<ul>\n  <li>Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.</li>\n  <li>Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.</li>\n  <li>NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.</li>\n  <li>Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.</li>\n  <li>Media can gather evidence, data, and graphics for reporting.</li>\n  <li>Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.</li>\n  <li>Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales.</li>\n</ul>\n"
@@ -112,10 +112,10 @@
   
     {
       "title"      : "Plugins",
-      "category"   : "develop-your-own-app, develop",
+      "category"   : "developer-tools, develop",
       "tags"       : "plugins",
       "tags_order" : "1",
-      "url"        : "/gfw-atlas/develop-your-own-app/develop/plugins.html",
+      "url"        : "/gfw-atlas/developer-tools/develop/plugins.html",
       "date"       : "2001-01-01 00:00:00 +0100",
       "order"      : "1",
       "content"    : "<h3>Nam dolor ante, condimentum at ante sit amet, aliquam rhoncus augue. Praesent ut pellentesque quam. Sed dapibus, purus dignissim rutrum blandit, lorem lectus venenatis felis, quis egestas tortor lectus in neque hiperpon espasiva.  Cras vel libero sed diam hendrerit viverra at sagittis ex. Proin sed diam tincidunt, convallis dui at, volutpat tellus.</h3>\n<p>GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:</p>\n<ul>\n  <li>Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.</li>\n  <li>Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.</li>\n  <li>NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.</li>\n  <li>Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.</li>\n  <li>Media can gather evidence, data, and graphics for reporting.</li>\n  <li>Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.</li>\n  <li>Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales.</li>\n</ul>\n"
