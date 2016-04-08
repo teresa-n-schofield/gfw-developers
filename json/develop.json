@@ -45,7 +45,7 @@
     } ,
   
     {
-      "title"      : "Forest Change by Landcover API",
+      "title"      : "Forest Change by Biomass API",
       "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "1",
