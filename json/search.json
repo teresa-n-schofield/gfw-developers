@@ -15,7 +15,7 @@
       "tags"     : "code",
       "url"      : "/gfw-atlas/developer-tools/develop/code.html",
       "date"     : "2001-04-01 00:00:00 +0200",
-      "content"  : "  https://github.com/Vizzuality/gfw  https://github.com/Vizzuality/gfw-climate  https://github.com/wri/gfw-commodities-app  https://github.com/wri/gfw-fires-app  https://github.com/wri/gfw-water  https://github.com/wri/odp_front_end  https://github.com/wri/gfw-mapbuilder"
+      "content"  : "  https://github.com/Vizzuality/gfw  https://github.com/Vizzuality/gfw-climate  https://github.com/wri/gfw-commodities-app  https://github.com/wri/gfw-fires-app  https://github.com/wri/odp_front_end  https://github.com/wri/gfw-mapbuilder"
     } ,
   
     {
@@ -82,48 +82,147 @@
     } ,
   
     {
-      "title"    : "Atlas 10",
+      "title"    : "Protecting forests &amp; peatlands in Indonesia",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas10.html",
+      "url"      : "/gfw-atlas/gallery/protecting-forest.html",
+      "date"     : "2001-01-21 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Water",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/water.html",
+      "date"     : "2001-01-20 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Logging Roads",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/logging-roads.html",
+      "date"     : "2001-01-19 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Forest Watcher Mobile App",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/forest-watcher-mobile.html",
+      "date"     : "2001-01-18 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Open Foris",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/open-foris.html",
+      "date"     : "2001-01-17 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Gabon Forest Atlas",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/gabon-forest-atlas.html",
+      "date"     : "2001-01-16 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Equatorial Guinea Forest Atlas",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/equatorial-guinea-forest-atlas.html",
+      "date"     : "2001-01-15 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Democratic Republic of Congo Forest Atlas",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/democratic-republic-congo-forest-atlas.html",
+      "date"     : "2001-01-14 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Republic of Congo Forest Atlas",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/republic-congo-forest-atlas.html",
+      "date"     : "2001-01-13 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Central African Republic Forest Atlas",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/central-african-republic-forest-atlas.html",
+      "date"     : "2001-01-12 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Cameroon Forest Atlas",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/cameroon-forest-atlas.html",
+      "date"     : "2001-01-11 00:00:00 +0100",
+      "content"  : ""
+    } ,
+  
+    {
+      "title"    : "Monitoring of the Andean Amazon Project (MAAP)",
+      "category" : "gallery",
+      "tags"     : "",
+      "url"      : "/gfw-atlas/gallery/maap.html",
       "date"     : "2001-01-10 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
-      "title"    : "Atlas 9",
+      "title"    : "Sustainable Palm Oil Transparency Toolkit (SPOTT)",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas9.html",
+      "url"      : "/gfw-atlas/gallery/spott.html",
       "date"     : "2001-01-09 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
-      "title"    : "Atlas 8",
+      "title"    : "Open Landscape Partnership Platform",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas8.html",
+      "url"      : "/gfw-atlas/gallery/open-landscape-platform.html",
       "date"     : "2001-01-08 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
-      "title"    : "Atlas 7",
+      "title"    : "Global Forest Watch: Sumatra campaign on Tomnod",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas7.html",
+      "url"      : "/gfw-atlas/gallery/tomnod.html",
       "date"     : "2001-01-07 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
-      "title"    : "Atlas 6",
+      "title"    : "Climate",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas6.html",
+      "url"      : "/gfw-atlas/gallery/climate.html",
       "date"     : "2001-01-06 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
@@ -136,12 +235,12 @@
     } ,
   
     {
-      "title"    : "Atlas 5",
+      "title"    : "Commodities",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas5.html",
+      "url"      : "/gfw-atlas/gallery/commodities.html",
       "date"     : "2001-01-05 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
@@ -154,12 +253,12 @@
     } ,
   
     {
-      "title"    : "Atlas 4",
+      "title"    : "Fires",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas4.html",
+      "url"      : "/gfw-atlas/gallery/fires.html",
       "date"     : "2001-01-04 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
@@ -172,12 +271,12 @@
     } ,
   
     {
-      "title"    : "Atlas 3",
+      "title"    : "Open Data Portal",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas3.html",
+      "url"      : "/gfw-atlas/gallery/open-data-portal.html",
       "date"     : "2001-01-03 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
@@ -190,12 +289,12 @@
     } ,
   
     {
-      "title"    : "Atlas 2",
+      "title"    : "Countries",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas2.html",
+      "url"      : "/gfw-atlas/gallery/countries.html",
       "date"     : "2001-01-02 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } ,
   
     {
@@ -208,12 +307,12 @@
     } ,
   
     {
-      "title"    : "Atlas 1",
+      "title"    : "GFW Interactive Map",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gallery-atlas1.html",
+      "url"      : "/gfw-atlas/gallery/gfw-interactive-map.html",
       "date"     : "2001-01-01 00:00:00 +0100",
-      "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
+      "content"  : ""
     } 
   
   ,
@@ -266,7 +365,7 @@
         "tags"     : "",
         "url"      : "/gfw-atlas/map-builder/",
         "date"     : "",
-        "content"  : "			  Map Builder	  Want to create your own version of Global Forest Watch, featuring a specific location or type of data? Map Builder is an easy tool to help you build your own mapping portal, complete with powerful analytical tools.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch – or upload your own.														Powerful analysis				Add tools for statistical and geospatial analyses that run right in your browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add them to the map gallery.												Start Building Your Map		Here’s your 1-2-3 guide on getting started.															  													1							Watch the tutorial videos							These step-by-step guides will teach you how to set up an ArcGIS Online user account, produce a basic interactive map, and share your map online.										  				  													2							Create a map							Add data layers to the map canvas, and start styling. All of your progress will be saved to your account, so you can work at your own pace.										  				  													3							Share your forest atlas							Use integrated social media tools to share your interactive map with your networks, export the map as a static image, or submit it into the map gallery.										  															Get started							Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                  						  						  					  																				Atlas 1														  							  							                                                          						  						  					  																				Atlas 2														  							  							                                                                                                      						  						  					  																				Atlas 3														  							  							                                                                                						  						  					  																				Atlas 4														  							  							                                                          						  						  					  																				Atlas 5														  							  							                                                          						  						  					  																				Atlas 6														  							  							                                                                                						  						  					  																				Atlas 7														  							  							                                    						  						  					  																				Atlas 8														  							  							                                    						  						  					  																				Atlas 9														  							  							                                    						  						  					  																				Atlas 10														  							  							                        															Submit your map		View all							Tutorials		Just getting started? Or need some help? Our tutorials will get you pointed in the right direction.														                                                                      						  						  					  																				Interface Overview									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                                						  						  					  																				Toggling data layers									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                                						  						  					  																				Changing the basemap									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                                                                                                  						  						  					  																				Creating your own map 1									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                          						  						  					  																				Creating your own map 2									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                                                                                                                                  															View all	"
+        "content"  : "			  Map Builder	  Want to create your own version of Global Forest Watch, featuring a specific location or type of data? Map Builder is an easy tool to help you build your own mapping portal, complete with powerful analytical tools.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch – or upload your own.														Powerful analysis				Add tools for statistical and geospatial analyses that run right in your browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add them to the map gallery.												Start Building Your Map		Here’s your 1-2-3 guide on getting started.															  													1							Watch the tutorial videos							These step-by-step guides will teach you how to set up an ArcGIS Online user account, produce a basic interactive map, and share your map online.										  				  													2							Create a map							Add data layers to the map canvas, and start styling. All of your progress will be saved to your account, so you can work at your own pace.										  				  													3							Share your forest atlas							Use integrated social media tools to share your interactive map with your networks, export the map as a static image, or submit it into the map gallery.										  															Get started							Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                          						  						  					  																				GFW Interactive Map														  							  							                                    						  						  					  																				Countries														  							  							                                    						  						  					  																				Open Data Portal														  							  							                                    						  						  					  																				Fires														  							  							                                    						  						  					  																				Commodities														  							  							                                    						  						  					  																				Climate														  							  							                                    						  						  					  																				Global Forest Watch: Sumatra campaign on Tomnod														  							  							                                    						  						  					  																				Open Landscape Partnership Platform														  							  							                                    						  						  					  																				Sustainable Palm Oil Transparency Toolkit (SPOTT)														  							  							                                    						  						  					  																				Protecting forests & peatlands in Indonesia														  							  							                                    						  						  					  																				Water														  							  							                                    						  						  					  																				Logging Roads														  							  							                                    						  						  					  																				Forest Watcher Mobile App														  							  							                                    						  						  					  																				Open Foris														  							  							                                    						  						  					  																				Gabon Forest Atlas														  							  							                                    						  						  					  																				Equatorial Guinea Forest Atlas														  							  							                                    						  						  					  																				Democratic Republic of Congo Forest Atlas														  							  							                                    						  						  					  																				Monitoring of the Andean Amazon Project (MAAP)														  							  							                                    						  						  					  																				Central African Republic Forest Atlas														  							  							                                    						  						  					  																				Cameroon Forest Atlas														  							  							                                    						  						  					  																				Republic of Congo Forest Atlas														  							  							                                                                                                                                                                                                                                                                                                                                            															Submit your map		View all							Tutorials		Just getting started? Or need some help? Our tutorials will get you pointed in the right direction.														                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              						  						  					  																				Interface Overview									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                                                      						  						  					  																				Toggling data layers									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                          						  						  					  																				Changing the basemap									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                          						  						  					  																				Creating your own map 1									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                          						  						  					  																				Creating your own map 2									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                    															View all	"
      
    } ,
   
@@ -277,7 +376,7 @@
         "tags"     : "",
         "url"      : "/gfw-atlas/",
         "date"     : "",
-        "content"  : "																																						GFW Developer’s Corner							Make maps that matter							Get started +																							  		  							  							Map builder				Build and share your own GFW map by choosing your own data, map style, and location.  					  		  	  	  		  											Developer tools				Use our open source code to create customized web-based or mobile applications using GFW data and tools.  		  											Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                  						  						  					  																				Atlas 1														  							  							                                                          						  						  					  																				Atlas 2														  							  							                                                                                                      						  						  					  																				Atlas 3														  							  							                                                                                						  						  					  																				Atlas 4														  							  							                                                          						  						  					  																				Atlas 5														  							  							                                                          						  						  					  																				Atlas 6														  							  							                                                                                						  						  					  																				Atlas 7														  							  							                                    						  						  					  																				Atlas 8														  							  							                                    						  						  					  																				Atlas 9														  							  							                                    						  						  					  																				Atlas 10														  							  							                        															Submit your map		View all	"
+        "content"  : "																																						GFW Developer’s Corner							Make maps that matter							Get started +																							  		  							  							Map builder				Build and share your own GFW map by choosing your own data, map style, and location.  					  		  	  	  		  											Developer tools				Use our open source code to create customized web-based or mobile applications using GFW data and tools.  		  											Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                          						  						  					  																				GFW Interactive Map														  							  							                                    						  						  					  																				Countries														  							  							                                    						  						  					  																				Open Data Portal														  							  							                                    						  						  					  																				Fires														  							  							                                    						  						  					  																				Commodities														  							  							                                    						  						  					  																				Climate														  							  							                                    						  						  					  																				Global Forest Watch: Sumatra campaign on Tomnod														  							  							                                    						  						  					  																				Open Landscape Partnership Platform														  							  							                                    						  						  					  																				Sustainable Palm Oil Transparency Toolkit (SPOTT)														  							  							                                    						  						  					  																				Protecting forests & peatlands in Indonesia														  							  							                                    						  						  					  																				Water														  							  							                                    						  						  					  																				Logging Roads														  							  							                                    						  						  					  																				Forest Watcher Mobile App														  							  							                                    						  						  					  																				Open Foris														  							  							                                    						  						  					  																				Gabon Forest Atlas														  							  							                                    						  						  					  																				Equatorial Guinea Forest Atlas														  							  							                                    						  						  					  																				Democratic Republic of Congo Forest Atlas														  							  							                                    						  						  					  																				Monitoring of the Andean Amazon Project (MAAP)														  							  							                                    						  						  					  																				Central African Republic Forest Atlas														  							  							                                    						  						  					  																				Cameroon Forest Atlas														  							  							                                    						  						  					  																				Republic of Congo Forest Atlas														  							  							                                                                                                                                                                                                                                                                                                                                            															Submit your map		View all	"
      
    } ,
   

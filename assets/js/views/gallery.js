@@ -7,10 +7,56 @@
   root.app.Collection = root.app.Collection || {};
 
   root.app.Collection.GalleryCollection = Backbone.Collection.extend({
+
+    // If you insert one more gallery post
+    // you need to set the order here
+    order: [
+      "gfw-interactive-map",
+      "countries",
+      "open-data-portal",
+      "fires",
+      "commodities",
+      "climate",
+      "tomnod",
+      "open-landscape-platform",
+      "spott",
+      "maap",
+      "cameroon-forest-atlas",
+      "central-african-republic-forest-atlas",
+      "republic-congo-forest-atlas",
+      "democratic-republic-congo-forest-atlas",
+      "equatorial-guinea-forest-atlas",
+      "gabon-forest-atlas",
+      "open-foris",
+      "forest-watcher-mobile",
+      "logging-roads",
+      "water",
+      "protecting-forest"
+    ],
+
+    filters: {
+      "africa" : "Africa",
+      "asia" : "Asia",
+      "boreal-forests" : "Boreal forests",
+      "commodities" : "Commodities",
+      "crowdsourcing" : "Crowdsourcing",
+      "data" : "Data",
+      "fires" : "Fires",
+      "global-forest-watch" : "Global Forest Watch",
+      "latin-america" : "Latin America",
+      "logging" : "Logging",
+      "map-builder" : "Map builder",
+      "maps" : "Maps",
+      "mining" : "Mining",
+      "mobile" : "Mobile",
+      "palm-oil" : "Palm oil",
+      "satellite-imagery" : "Satellite imagery",
+    },
+
     url: baseurl + '/json/gallery.json',
     
     comparator: function(item) {
-      return parseInt(item.get("order"))
+      return this.order.indexOf(item.get("slug"));
     },
 
     getPaginatedCollection: function(currentPage,itemsOnPage,filter) {
@@ -24,15 +70,22 @@
     },
 
     getFilters: function() {
-      var filters = _.pluck(this.toJSON(),'filter');
-      return _.sortBy(_.uniq(_.flatten(_.map(filters, function(el){
-        return el.split(',');
-      }))));
+      return this.filters;
+      // var filters = _.pluck(this.toJSON(),'filters');
+      // // Get all the filters, trim white spaces, get the uniq values and sort them alphabetically
+      // var filter_slugs = _.sortBy(_.uniq(_.flatten(_.map(filters, function(el){
+      //   var arr = el.split(',');
+      //   return _.compact(_.map(arr,function(v) {
+      //     return $.trim(v);
+      //   }))
+      // }))));
+      
+      // return filter_slugs;
     },
 
     filter: function(filter) {
       return _.compact(_.map(this.toJSON(), function(v){
-        return (v.filter.indexOf(filter) != -1) ? v : null
+        return (v.filters.indexOf(filter) != -1) ? v : null
       }))
     }
 
@@ -49,7 +102,7 @@
     model: new (Backbone.Model.extend({
       defaults: {
         currentPage: 0,
-        itemsOnPage: 6,
+        itemsOnPage: 9,
         filter: 'all'
       }
     })),
