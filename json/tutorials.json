@@ -1,40 +1,7 @@
 [
   
     {
-      "title"      : "Creating your own map 2",
-      "category"   : "tutorials",
-      "tags"       : "",
-      "tags_order" : "",
-      "url"        : "/gfw-atlas/tutorials/creating-your-own-map2.html",
-      "date"       : "2001-01-05 00:00:00 +0100",
-      "order"      : "5",
-      "content"    : ""
-    } ,
-  
-    {
-      "title"      : "Creating your own map 1",
-      "category"   : "tutorials",
-      "tags"       : "",
-      "tags_order" : "",
-      "url"        : "/gfw-atlas/tutorials/creating-your-own-map1.html",
-      "date"       : "2001-01-04 00:00:00 +0100",
-      "order"      : "4",
-      "content"    : ""
-    } ,
-  
-    {
-      "title"      : "Changing the basemap",
-      "category"   : "tutorials",
-      "tags"       : "",
-      "tags_order" : "",
-      "url"        : "/gfw-atlas/tutorials/changing-the-basemap.html",
-      "date"       : "2001-01-03 00:00:00 +0100",
-      "order"      : "3",
-      "content"    : ""
-    } ,
-  
-    {
-      "title"      : "Toggling data layers",
+      "title"      : "Explore Data on the GFW Map Builder Interactive Map",
       "category"   : "tutorials",
       "tags"       : "",
       "tags_order" : "",
@@ -45,7 +12,7 @@
     } ,
   
     {
-      "title"      : "Interface Overview",
+      "title"      : "Create a Web Map in ArcGIS Online",
       "category"   : "tutorials",
       "tags"       : "",
       "tags_order" : "",

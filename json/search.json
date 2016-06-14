@@ -226,29 +226,11 @@
     } ,
   
     {
-      "title"    : "Creating your own map 2",
-      "category" : "tutorials",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/tutorials/creating-your-own-map2.html",
-      "date"     : "2001-01-05 00:00:00 +0100",
-      "content"  : ""
-    } ,
-  
-    {
       "title"    : "GFW Commodities",
       "category" : "gallery",
       "tags"     : "",
       "url"      : "/gfw-atlas/gallery/commodities.html",
       "date"     : "2001-01-05 00:00:00 +0100",
-      "content"  : ""
-    } ,
-  
-    {
-      "title"    : "Creating your own map 1",
-      "category" : "tutorials",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/tutorials/creating-your-own-map1.html",
-      "date"     : "2001-01-04 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -262,15 +244,6 @@
     } ,
   
     {
-      "title"    : "Changing the basemap",
-      "category" : "tutorials",
-      "tags"     : "",
-      "url"      : "/gfw-atlas/tutorials/changing-the-basemap.html",
-      "date"     : "2001-01-03 00:00:00 +0100",
-      "content"  : ""
-    } ,
-  
-    {
       "title"    : "GFW Open Data Portal",
       "category" : "gallery",
       "tags"     : "",
@@ -280,7 +253,7 @@
     } ,
   
     {
-      "title"    : "Toggling data layers",
+      "title"    : "Explore Data on the GFW Map Builder Interactive Map",
       "category" : "tutorials",
       "tags"     : "",
       "url"      : "/gfw-atlas/tutorials/toggling-data-layers.html",
@@ -298,7 +271,7 @@
     } ,
   
     {
-      "title"    : "Interface Overview",
+      "title"    : "Create a Web Map in ArcGIS Online",
       "category" : "tutorials",
       "tags"     : "",
       "url"      : "/gfw-atlas/tutorials/using-interface.html",
@@ -365,7 +338,7 @@
         "tags"     : "",
         "url"      : "/gfw-atlas/map-builder/",
         "date"     : "",
-        "content"  : "			  Map Builder	  Want to create your own version of Global Forest Watch, featuring a specific location or type of data? Map Builder is an easy tool to help you build your own mapping portal, complete with powerful analytical tools.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch – or upload your own.														Powerful analysis				Add tools for statistical and geospatial analyses that run right in your browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add them to the map gallery.												Start Building Your Map		Here’s your 1-2-3 guide on getting started.															  													1							Watch the tutorial videos							These step-by-step guides will teach you how to set up an ArcGIS Online user account, produce a basic interactive map, and share your map online.										  				  													2							Create a map							Add data layers to the map canvas, and start styling. All of your progress will be saved to your account, so you can work at your own pace.										  				  													3							Share your forest atlas							Use integrated social media tools to share your interactive map with your networks, export the map as a static image, or submit it into the map gallery.										  															Get started							Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                                                                                                                                                                                                                                              						  						  							  							  																							Gabon Forest Atlas						  								  							                                    						  						  							  							  																							Equatorial Guinea Forest Atlas						  								  							                                    						  						  							  							  																							Democratic Republic of Congo Forest Atlas						  								  							                                                          						  						  							  							  																							Central African Republic Forest Atlas						  								  							                                    						  						  							  							  																							Cameroon Forest Atlas						  								  							                                    						  						  							  							  																							Republic of Congo Forest Atlas						  								  							                                                                                                                                                                                                                                                                                                                                            															Submit your map		View all							Tutorials		Just getting started? Or need some help? Our tutorials will get you pointed in the right direction.														                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              						  						  					  																				Interface Overview									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                                                      						  						  					  																				Toggling data layers									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                          						  						  					  																				Changing the basemap									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                          						  						  					  																				Creating your own map 1									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                          						  						  					  																				Creating your own map 2									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                    															View all	"
+        "content"  : "			  Map Builder	  Want to create your own version of Global Forest Watch, featuring a specific location or type of data? Map Builder is an easy tool to help you build your own mapping portal, complete with powerful analytical tools.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch – or upload your own.														Powerful analysis				Add tools for statistical and geospatial analyses that run right in your browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add them to the map gallery.												Start Building Your Map		Here’s your 1-2-3 guide on getting started.															  													1							Watch the tutorial videos							These step-by-step guides will teach you how to set up an ArcGIS Online user account, produce a basic interactive map, and share your map online.										  				  													2							Create a map							Add data layers to the map canvas, and start styling. All of your progress will be saved to your account, so you can work at your own pace.										  				  													3							Share your forest atlas							Use integrated social media tools to share your interactive map with your networks, export the map as a static image, or submit it into the map gallery.										  															Get started							Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                                                                                                                                                                                                                                              						  						  							  							  																							Gabon Forest Atlas						  								  							                                    						  						  							  							  																							Equatorial Guinea Forest Atlas						  								  							                                                          						  						  							  							  																							Republic of Congo Forest Atlas						  								  							                                    						  						  							  							  																							Central African Republic Forest Atlas						  								  							                                    						  						  							  							  																							Cameroon Forest Atlas						  								  							                                    						  						  							  							  																							Democratic Republic of Congo Forest Atlas						  								  							                                                                                                                                                                                                                                                                          															Submit your map		View all							Tutorials		Just getting started? Or need some help? Our tutorials will get you pointed in the right direction.														                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              						  						  					  																				Create a Web Map in ArcGIS Online									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                                						  						  					  																				Explore Data on the GFW Map Builder Interactive Map									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam					  							  							                                                                                                                                                            															View all	"
      
    } ,
   
@@ -376,7 +349,7 @@
         "tags"     : "",
         "url"      : "/gfw-atlas/",
         "date"     : "",
-        "content"  : "																																						GFW Developer’s Corner							Make maps that matter							Get started +																							  		  							  							Map builder				Build and share your own GFW map by choosing your own data, map style, and location.  					  		  	  	  		  											Developer tools				Use our open source code to create customized web-based or mobile applications using GFW data and tools.  		  											Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                                                                                                                                                                                                                                              						  						  							  							  																							Gabon Forest Atlas						  								  							                                    						  						  							  							  																							Equatorial Guinea Forest Atlas						  								  							                                    						  						  							  							  																							Democratic Republic of Congo Forest Atlas						  								  							                                                          						  						  							  							  																							Central African Republic Forest Atlas						  								  							                                    						  						  							  							  																							Cameroon Forest Atlas						  								  							                                    						  						  							  							  																							Republic of Congo Forest Atlas						  								  							                                                                                                                                                                                                                                                                                                                                            															Submit your map		View all	"
+        "content"  : "																																						GFW Developer’s Corner							Make maps that matter							Get started +																							  		  							  							Map builder				Build and share your own GFW map by choosing your own data, map style, and location.  					  		  	  	  		  											Developer tools				Use our open source code to create customized web-based or mobile applications using GFW data and tools.  		  											Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                                                                                                                                                                                                                                              						  						  							  							  																							Gabon Forest Atlas						  								  							                                    						  						  							  							  																							Equatorial Guinea Forest Atlas						  								  							                                                          						  						  							  							  																							Republic of Congo Forest Atlas						  								  							                                    						  						  							  							  																							Central African Republic Forest Atlas						  								  							                                    						  						  							  							  																							Cameroon Forest Atlas						  								  							                                    						  						  							  							  																							Democratic Republic of Congo Forest Atlas						  								  							                                                                                                                                                                                                                                                                          															Submit your map		View all	"
      
    } ,
   
