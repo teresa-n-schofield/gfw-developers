@@ -4,7 +4,7 @@
       "title"    : "Style Guide",
       "category" : "developer-tools, develop",
       "tags"     : "style guide",
-      "url"      : "/gfw-atlas/developer-tools/develop/style-guide.html",
+      "url"      : "/developers-corner/developer-tools/develop/style-guide.html",
       "date"     : "2001-05-01 00:00:00 +0200",
       "content"  : "What developers need to know before they build a GFW apphttp://vizzuality.github.io/gfw-style-guides/"
     } ,
@@ -13,7 +13,7 @@
       "title"    : "Library 1",
       "category" : "developer-tools, develop",
       "tags"     : "code",
-      "url"      : "/gfw-atlas/developer-tools/develop/code.html",
+      "url"      : "/developers-corner/developer-tools/develop/code.html",
       "date"     : "2001-04-01 00:00:00 +0200",
       "content"  : "  https://github.com/Vizzuality/gfw  https://github.com/Vizzuality/gfw-climate  https://github.com/wri/gfw-commodities-app  https://github.com/wri/gfw-fires-app  https://github.com/wri/odp_front_end  https://github.com/wri/gfw-mapbuilder  https://github.com/wri/arcpy_metadata  https://github.com/wri/gfw-analysis  https://github.com/wri/gfw-sync2"
     } ,
@@ -22,7 +22,7 @@
       "title"    : "Carbon Loss API",
       "category" : "developer-tools, develop",
       "tags"     : "api",
-      "url"      : "/gfw-atlas/developer-tools/develop/carbon-api.html",
+      "url"      : "/developers-corner/developer-tools/develop/carbon-api.html",
       "date"     : "2001-03-07 00:00:00 +0100",
       "content"  : "Works similar to the forest change API.Currently only ARCGIS API, Wrapper under development.Not yet documented."
     } ,
@@ -31,7 +31,7 @@
       "title"    : "Land Cover API",
       "category" : "developer-tools, develop",
       "tags"     : "api",
-      "url"      : "/gfw-atlas/developer-tools/develop/lancover-api.html",
+      "url"      : "/developers-corner/developer-tools/develop/lancover-api.html",
       "date"     : "2001-03-06 00:00:00 +0100",
       "content"  : "Works similar to the forest change API.Currently only ARCGIS API, Wrapper under development.Not yet documented."
     } ,
@@ -40,7 +40,7 @@
       "title"    : "Forest Change by Biomass API",
       "category" : "developer-tools, develop",
       "tags"     : "api",
-      "url"      : "/gfw-atlas/developer-tools/develop/forest-change-biomass-api.html",
+      "url"      : "/developers-corner/developer-tools/develop/forest-change-biomass-api.html",
       "date"     : "2001-03-05 00:00:00 +0100",
       "content"  : "Works similar to the forest change API.Currently only ARCGIS API, Wrapper under development.Not yet documented."
     } ,
@@ -49,7 +49,7 @@
       "title"    : "Forest Change by Landcover API",
       "category" : "developer-tools, develop",
       "tags"     : "api",
-      "url"      : "/gfw-atlas/developer-tools/develop/forest-change-landcover-api.html",
+      "url"      : "/developers-corner/developer-tools/develop/forest-change-landcover-api.html",
       "date"     : "2001-03-04 00:00:00 +0100",
       "content"  : "Works similar to the forest change API.Currently only ARCGIS API, Wrapper under development.Not yet documented."
     } ,
@@ -58,7 +58,7 @@
       "title"    : "My Global Forest Watch API",
       "category" : "developer-tools, develop",
       "tags"     : "api",
-      "url"      : "/gfw-atlas/developer-tools/develop/my-gfw-api.html",
+      "url"      : "/developers-corner/developer-tools/develop/my-gfw-api.html",
       "date"     : "2001-03-03 00:00:00 +0100",
       "content"  : "Subscribe to GFW alerts and manage your subscriptions using this API. This will allow users to access their subscriptions through other apps.Under development."
     } ,
@@ -67,7 +67,7 @@
       "title"    : "Metadata API",
       "category" : "developer-tools, develop",
       "tags"     : "api",
-      "url"      : "/gfw-atlas/developer-tools/develop/metadata-api.html",
+      "url"      : "/developers-corner/developer-tools/develop/metadata-api.html",
       "date"     : "2001-03-02 00:00:00 +0100",
       "content"  : "http://api.globalforestwatch.org/metadataRetrieve full metadata for all GFW layers as JSON object. Soon also as XML object in ArcGIS, ISO and FGDC standard to use.(Not yet documented)"
     } ,
@@ -76,7 +76,7 @@
       "title"    : "Forest Change API",
       "category" : "developer-tools, develop",
       "tags"     : "api",
-      "url"      : "/gfw-atlas/developer-tools/develop/forest-change-api.html",
+      "url"      : "/developers-corner/developer-tools/develop/forest-change-api.html",
       "date"     : "2001-03-01 00:00:00 +0100",
       "content"  : "http://api.globalforestwatch.org/forest-changeUsers can make calls to the GFW API and receive statistics on:	University of Maryland (UMD)/Google tree cover loss &amp; gain	FORMA alerts	IMAZON SAD alerts	QUICC alerts	Terra-i alerts	NASA active firesThey can post their own geometry, or use predefined geometries such as administrative boundaries, concessions or protected areas.They can also specify the time period for they are interested in.Full documentation of the calls are herehttps://github.com/wri/gfw-api"
     } ,
@@ -85,7 +85,7 @@
       "title"    : "Protecting forests &amp; peatlands in Indonesia",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/protecting-forest.html",
+      "url"      : "/developers-corner/gallery/protecting-forest.html",
       "date"     : "2001-01-21 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -94,7 +94,7 @@
       "title"    : "GFW Water",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/water.html",
+      "url"      : "/developers-corner/gallery/water.html",
       "date"     : "2001-01-20 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -103,7 +103,7 @@
       "title"    : "Logging Roads",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/logging-roads.html",
+      "url"      : "/developers-corner/gallery/logging-roads.html",
       "date"     : "2001-01-19 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -112,7 +112,7 @@
       "title"    : "Forest Watcher Mobile App",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/forest-watcher-mobile.html",
+      "url"      : "/developers-corner/gallery/forest-watcher-mobile.html",
       "date"     : "2001-01-18 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -121,7 +121,7 @@
       "title"    : "Open Foris",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/open-foris.html",
+      "url"      : "/developers-corner/gallery/open-foris.html",
       "date"     : "2001-01-17 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -130,7 +130,7 @@
       "title"    : "Gabon Forest Atlas",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gabon-forest-atlas.html",
+      "url"      : "/developers-corner/gallery/gabon-forest-atlas.html",
       "date"     : "2001-01-16 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -139,7 +139,7 @@
       "title"    : "Equatorial Guinea Forest Atlas",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/equatorial-guinea-forest-atlas.html",
+      "url"      : "/developers-corner/gallery/equatorial-guinea-forest-atlas.html",
       "date"     : "2001-01-15 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -148,7 +148,7 @@
       "title"    : "Democratic Republic of Congo Forest Atlas",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/democratic-republic-congo-forest-atlas.html",
+      "url"      : "/developers-corner/gallery/democratic-republic-congo-forest-atlas.html",
       "date"     : "2001-01-14 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -157,7 +157,7 @@
       "title"    : "Republic of Congo Forest Atlas",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/republic-congo-forest-atlas.html",
+      "url"      : "/developers-corner/gallery/republic-congo-forest-atlas.html",
       "date"     : "2001-01-13 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -166,7 +166,7 @@
       "title"    : "Central African Republic Forest Atlas",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/central-african-republic-forest-atlas.html",
+      "url"      : "/developers-corner/gallery/central-african-republic-forest-atlas.html",
       "date"     : "2001-01-12 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -175,7 +175,7 @@
       "title"    : "Cameroon Forest Atlas",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/cameroon-forest-atlas.html",
+      "url"      : "/developers-corner/gallery/cameroon-forest-atlas.html",
       "date"     : "2001-01-11 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -184,7 +184,7 @@
       "title"    : "Monitoring of the Andean Amazon Project (MAAP)",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/maap.html",
+      "url"      : "/developers-corner/gallery/maap.html",
       "date"     : "2001-01-10 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -193,7 +193,7 @@
       "title"    : "Sustainable Palm Oil Transparency Toolkit (SPOTT)",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/spott.html",
+      "url"      : "/developers-corner/gallery/spott.html",
       "date"     : "2001-01-09 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -202,7 +202,7 @@
       "title"    : "Open Landscape Partnership Platform",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/open-landscape-platform.html",
+      "url"      : "/developers-corner/gallery/open-landscape-platform.html",
       "date"     : "2001-01-08 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -211,7 +211,7 @@
       "title"    : "Global Forest Watch: Sumatra campaign on Tomnod",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/tomnod.html",
+      "url"      : "/developers-corner/gallery/tomnod.html",
       "date"     : "2001-01-07 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -220,7 +220,7 @@
       "title"    : "GFW Climate",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/climate.html",
+      "url"      : "/developers-corner/gallery/climate.html",
       "date"     : "2001-01-06 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -229,7 +229,7 @@
       "title"    : "GFW Commodities",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/commodities.html",
+      "url"      : "/developers-corner/gallery/commodities.html",
       "date"     : "2001-01-05 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -238,7 +238,7 @@
       "title"    : "GFW Fires",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/fires.html",
+      "url"      : "/developers-corner/gallery/fires.html",
       "date"     : "2001-01-04 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -247,7 +247,7 @@
       "title"    : "GFW Open Data Portal",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/open-data-portal.html",
+      "url"      : "/developers-corner/gallery/open-data-portal.html",
       "date"     : "2001-01-03 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -256,7 +256,7 @@
       "title"    : "GFW Countries",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/countries.html",
+      "url"      : "/developers-corner/gallery/countries.html",
       "date"     : "2001-01-02 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -265,7 +265,7 @@
       "title"    : "Map Builder Interactive Map Overview",
       "category" : "tutorials",
       "tags"     : "map_builder",
-      "url"      : "/gfw-atlas/tutorials/tutorial-map-builder-map-builder-interactive-map-overview.html",
+      "url"      : "/developers-corner/tutorials/tutorial-map-builder-map-builder-interactive-map-overview.html",
       "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "        "
     } ,
@@ -274,7 +274,7 @@
       "title"    : "Create a Web Map in ArcGIS Online",
       "category" : "tutorials",
       "tags"     : "map_builder",
-      "url"      : "/gfw-atlas/tutorials/tutorial-map-builder-create-a-web-map-in-arcgis-online.html",
+      "url"      : "/developers-corner/tutorials/tutorial-map-builder-create-a-web-map-in-arcgis-online.html",
       "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "        "
     } ,
@@ -283,7 +283,7 @@
       "title"    : "Build a Custom Web App in ArcGIS (for public accounts)",
       "category" : "tutorials",
       "tags"     : "map_builder",
-      "url"      : "/gfw-atlas/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis.html",
+      "url"      : "/developers-corner/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis.html",
       "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "        "
     } ,
@@ -292,7 +292,7 @@
       "title"    : "Build a Custom Web App in ArcGIS (for organizational accounts)",
       "category" : "tutorials",
       "tags"     : "map_builder",
-      "url"      : "/gfw-atlas/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis-organizations.html",
+      "url"      : "/developers-corner/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis-organizations.html",
       "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "        "
     } ,
@@ -301,7 +301,7 @@
       "title"    : "GFW Interactive Map",
       "category" : "gallery",
       "tags"     : "",
-      "url"      : "/gfw-atlas/gallery/gfw-interactive-map.html",
+      "url"      : "/developers-corner/gallery/gfw-interactive-map.html",
       "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : ""
     } 
@@ -321,7 +321,7 @@
         "title"    : "Developer tools",
         "category" : "",
         "tags"     : "",
-        "url"      : "/gfw-atlas/developer-tools/",
+        "url"      : "/developers-corner/developer-tools/",
         "date"     : "",
         "content"  : "			  Developer tools	        Do you ever wish that Global Forest Watch could be customized for your geography or a specific issue? Do you have a great idea for how GFW data could help solve a specific problem? Using GFW’s public Application Programming Interface (API) and open source code, anyone can build on GFW data and technology to create customized web-based or mobile applications. This section contains the tools and information you need to develop applications that harness Global Forest Watch data and technology.            Browse all Global Forest Watch apps here.          	"
      
@@ -332,7 +332,7 @@
         "title"    : "Gallery",
         "category" : "",
         "tags"     : "",
-        "url"      : "/gfw-atlas/gallery/",
+        "url"      : "/developers-corner/gallery/",
         "date"     : "",
         "content"  : "        Gallery    Check out our hand-picked selection of maps and apps from others in the GFW community. Look here for inspiration, or submit your map to be featured.  						You may find this interesting							  		  							  							Map builder				Build and share your own GFW map by choosing your own data, map style, and location.  					  		  	  	  		  											Developer tools				Use our open source code to create customized web-based or mobile applications using GFW data and tools.  		  					"
      
@@ -343,7 +343,7 @@
         "title"    : "Tutorials",
         "category" : "",
         "tags"     : "",
-        "url"      : "/gfw-atlas/tutorials/",
+        "url"      : "/developers-corner/tutorials/",
         "date"     : "",
         "content"  : "			  Tutorials	  Etiam varius felis quis libero pulvinar, et aliquet ipsum suscipit. Sed sit amet lectus eget leo blandit aliquet. Aliquam sollicitudin magna lacus, ut interdum mauris commodo ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus.	"
      
@@ -354,7 +354,7 @@
         "title"    : "Map Builder",
         "category" : "",
         "tags"     : "",
-        "url"      : "/gfw-atlas/map-builder/",
+        "url"      : "/developers-corner/map-builder/",
         "date"     : "",
         "content"  : "			  Map Builder	  Want to create your own version of Global Forest Watch, featuring a specific location or type of data? Map Builder is an easy tool to help you build your own mapping portal, complete with powerful analytical tools.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch – or upload your own.														Powerful analysis				Add tools for statistical and geospatial analyses that run right in your browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add them to the map gallery.												Start Building Your Map		Here’s your 1-2-3 guide on getting started.															  													1							Watch the tutorial videos							These step-by-step guides will teach you how to set up an ArcGIS Online user account, produce a basic interactive map, and share your map online.										  				  													2							Create a map							Add data layers to the map canvas, and start styling. All of your progress will be saved to your account, so you can work at your own pace.										  				  													3							Share your forest atlas							Use integrated social media tools to share your interactive map with your networks, export the map as a static image, or submit it into the map gallery.										  															Get started							Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                                                                                                                                                                                                                                              						  						  							  							  																							Gabon Forest Atlas						  								  							                                    						  						  							  							  																							Equatorial Guinea Forest Atlas						  								  							                                    						  						  							  							  																							Democratic Republic of Congo Forest Atlas						  								  							                                                          						  						  							  							  																							Central African Republic Forest Atlas						  								  							                                    						  						  							  							  																							Cameroon Forest Atlas						  								  							                                                                                                                            						  						  							  							  																							Republic of Congo Forest Atlas						  								  							                                                                                                                                                                                                                              															Submit your map		View all							Tutorials		Just getting started? Or need some help? Our tutorials will get you pointed in the right direction.														                                                						  						  					  																				Build a Custom Web App in ArcGIS (for organizational accounts)														  							  							                                    						  						  					  																				Build a Custom Web App in ArcGIS (for public accounts)														  							  							                                    						  						  					  																				Create a Web Map in ArcGIS Online														  							  							                                    						  						  					  																				Map Builder Interactive Map Overview														  							  							                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      															View all	"
      
@@ -365,7 +365,7 @@
         "title"    : "Forest Atlas",
         "category" : "",
         "tags"     : "",
-        "url"      : "/gfw-atlas/",
+        "url"      : "/developers-corner/",
         "date"     : "",
         "content"  : "																																						GFW Developer’s Corner							Make maps that matter							Get started +																							  		  							  							Map builder				Build and share your own GFW map by choosing your own data, map style, and location.  					  		  	  	  		  											Developer tools				Use our open source code to create customized web-based or mobile applications using GFW data and tools.  		  											Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                                                                                                                                                                                                                                              						  						  							  							  																							Gabon Forest Atlas						  								  							                                    						  						  							  							  																							Equatorial Guinea Forest Atlas						  								  							                                    						  						  							  							  																							Democratic Republic of Congo Forest Atlas						  								  							                                                          						  						  							  							  																							Central African Republic Forest Atlas						  								  							                                    						  						  							  							  																							Cameroon Forest Atlas						  								  							                                                                                                                            						  						  							  							  																							Republic of Congo Forest Atlas						  								  							                                                                                                                                                                                                                              															Submit your map		View all	"
      
@@ -376,7 +376,7 @@
         "title"    : "Creating your own map 2",
         "category" : "tutorials",
         "tags"     : "creating your own map",
-        "url"      : "/gfw-atlas/resources/sample-post.html",
+        "url"      : "/developers-corner/resources/sample-post.html",
         "date"     : "",
         "content"  : "GFW aims to radically improve the availability, quality, and accessibility of forest data for everyone:  Governments can use GFW to detect illegal forest clearing and target forest law enforcement efforts.  Companies can monitor the impacts of commodity supply chains on forests and demonstrate compliance with sustainability commitments and certifications. Learn more at GFW Commodities.  NGOs &amp; civil society can identify deforestation hotspots and bolster their investigations, advocacy, and campaigns.  Indigenous communities can monitor their territories and raise an alarm when their customary forests are threatened.  Media can gather evidence, data, and graphics for reporting.  Researchers can analyze forest trends on a local or global scale and better understand the causes of forest change.  Concerned citizens everywhere can learn more about the state of forests and participate in forest monitoring. Students and educators can learn more about forests at local and global scales."
      

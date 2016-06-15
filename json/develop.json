@@ -5,7 +5,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "style guide",
       "tags_order" : "3",
-      "url"        : "/gfw-atlas/developer-tools/develop/style-guide.html",
+      "url"        : "/developers-corner/developer-tools/develop/style-guide.html",
       "date"       : "2001-05-01 00:00:00 +0200",
       "order"      : "1",
       "content"    : "<p>What developers need to know before they build a GFW app</p>\n<p><a target=\"_blank\" href=\"http://vizzuality.github.io/gfw-style-guides/\">http://vizzuality.github.io/gfw-style-guides/</a></p>\n"
@@ -16,7 +16,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "code",
       "tags_order" : "2",
-      "url"        : "/gfw-atlas/developer-tools/develop/code.html",
+      "url"        : "/developers-corner/developer-tools/develop/code.html",
       "date"       : "2001-04-01 00:00:00 +0200",
       "order"      : "1",
       "content"    : "<ul>\n  <li><a target=\"_blank\" href=\"https://github.com/Vizzuality/gfw\">https://github.com/Vizzuality/gfw</a></li>\n  <li><a target=\"_blank\" href=\"https://github.com/Vizzuality/gfw-climate\">https://github.com/Vizzuality/gfw-climate</a></li>\n  <li><a target=\"_blank\" href=\"https://github.com/wri/gfw-commodities-app\">https://github.com/wri/gfw-commodities-app</a></li>\n  <li><a target=\"_blank\" href=\"https://github.com/wri/gfw-fires-app\">https://github.com/wri/gfw-fires-app</a></li>\n  <li><a target=\"_blank\" href=\"https://github.com/wri/odp_front_end\">https://github.com/wri/odp_front_end</a></li>\n  <li><a target=\"_blank\" href=\"https://github.com/wri/gfw-mapbuilder\">https://github.com/wri/gfw-mapbuilder</a></li>\n\n  <li><a target=\"_blank\" href=\"https://github.com/wri/arcpy_metadata\">https://github.com/wri/arcpy_metadata</a></li>\n  <li><a target=\"_blank\" href=\"https://github.com/wri/gfw-analysis\">https://github.com/wri/gfw-analysis</a></li>\n  <li><a target=\"_blank\" href=\"https://github.com/wri/gfw-sync2\">https://github.com/wri/gfw-sync2</a></li>\n</ul>\n"
@@ -27,7 +27,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "1",
-      "url"        : "/gfw-atlas/developer-tools/develop/carbon-api.html",
+      "url"        : "/developers-corner/developer-tools/develop/carbon-api.html",
       "date"       : "2001-03-07 00:00:00 +0100",
       "order"      : "7",
       "content"    : "<p>Works similar to the forest change API.</p>\n<p>Currently only ARCGIS API, Wrapper under development.</p>\n<p>Not yet documented.</p>\n"
@@ -38,7 +38,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "1",
-      "url"        : "/gfw-atlas/developer-tools/develop/lancover-api.html",
+      "url"        : "/developers-corner/developer-tools/develop/lancover-api.html",
       "date"       : "2001-03-06 00:00:00 +0100",
       "order"      : "6",
       "content"    : "<p>Works similar to the forest change API.</p>\n<p>Currently only ARCGIS API, Wrapper under development.</p>\n<p>Not yet documented.</p>\n"
@@ -49,7 +49,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "1",
-      "url"        : "/gfw-atlas/developer-tools/develop/forest-change-biomass-api.html",
+      "url"        : "/developers-corner/developer-tools/develop/forest-change-biomass-api.html",
       "date"       : "2001-03-05 00:00:00 +0100",
       "order"      : "4",
       "content"    : "<p>Works similar to the forest change API.</p>\n<p>Currently only ARCGIS API, Wrapper under development.</p>\n<p>Not yet documented.</p>\n"
@@ -60,7 +60,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "1",
-      "url"        : "/gfw-atlas/developer-tools/develop/forest-change-landcover-api.html",
+      "url"        : "/developers-corner/developer-tools/develop/forest-change-landcover-api.html",
       "date"       : "2001-03-04 00:00:00 +0100",
       "order"      : "4",
       "content"    : "<p>Works similar to the forest change API.</p>\n<p>Currently only ARCGIS API, Wrapper under development.</p>\n<p>Not yet documented.</p>\n"
@@ -71,7 +71,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "1",
-      "url"        : "/gfw-atlas/developer-tools/develop/my-gfw-api.html",
+      "url"        : "/developers-corner/developer-tools/develop/my-gfw-api.html",
       "date"       : "2001-03-03 00:00:00 +0100",
       "order"      : "3",
       "content"    : "<p>Subscribe to GFW alerts and manage your subscriptions using this API. This will allow users to access their subscriptions through other apps.</p>\n<p>Under development.</p>\n"
@@ -82,7 +82,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "1",
-      "url"        : "/gfw-atlas/developer-tools/develop/metadata-api.html",
+      "url"        : "/developers-corner/developer-tools/develop/metadata-api.html",
       "date"       : "2001-03-02 00:00:00 +0100",
       "order"      : "2",
       "content"    : "<p><a target=\"_blank\" href=\"http://api.globalforestwatch.org/metadata\">http://api.globalforestwatch.org/metadata</a></p>\n<p>Retrieve full metadata for all GFW layers as JSON object. Soon also as XML object in ArcGIS, ISO and FGDC standard to use.</p>\n<p>(Not yet documented)</p>\n"
@@ -93,7 +93,7 @@
       "category"   : "developer-tools, develop",
       "tags"       : "api",
       "tags_order" : "1",
-      "url"        : "/gfw-atlas/developer-tools/develop/forest-change-api.html",
+      "url"        : "/developers-corner/developer-tools/develop/forest-change-api.html",
       "date"       : "2001-03-01 00:00:00 +0100",
       "order"      : "1",
       "content"    : "<p><a target=\"_blank\" href=\"http://api.globalforestwatch.org/forest-change\">http://api.globalforestwatch.org/forest-change</a></p>\n<p>Users can make calls to the GFW API and receive statistics on:</p>\n<ul>\n\t<li>University of Maryland (UMD)/Google tree cover loss &amp; gain</li>\n\t<li>FORMA alerts</li>\n\t<li>IMAZON SAD alerts</li>\n\t<li>QUICC alerts</li>\n\t<li>Terra-i alerts</li>\n\t<li>NASA active fires</li>\n</ul>\n<p>They can post their own geometry, or use predefined geometries such as administrative boundaries, concessions or protected areas.</p>\n<p>They can also specify the time period for they are interested in.</p>\n<p>Full documentation of the calls are here</p>\n<p><a target=\"_blank\" href=\"https://github.com/wri/gfw-api\">https://github.com/wri/gfw-api</a></p>\n"

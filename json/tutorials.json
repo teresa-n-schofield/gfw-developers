@@ -5,7 +5,7 @@
       "category"   : "tutorials",
       "tags"       : "map_builder",
       "tags_order" : "",
-      "url"        : "/gfw-atlas/tutorials/tutorial-map-builder-map-builder-interactive-map-overview.html",
+      "url"        : "/developers-corner/tutorials/tutorial-map-builder-map-builder-interactive-map-overview.html",
       "date"       : "2001-01-01 00:00:00 +0100",
       "order"      : "",
       "content"    : "<div id="desktopContent" class="content">  <div class="video">    <iframe width="560" height="315" src="https://www.youtube.com/embed/k3uchlrWF7o" frameborder="0" allowfullscreen=""></iframe>  </div></div><div id="mobileContent" class="content"></div>"
@@ -16,7 +16,7 @@
       "category"   : "tutorials",
       "tags"       : "map_builder",
       "tags_order" : "",
-      "url"        : "/gfw-atlas/tutorials/tutorial-map-builder-create-a-web-map-in-arcgis-online.html",
+      "url"        : "/developers-corner/tutorials/tutorial-map-builder-create-a-web-map-in-arcgis-online.html",
       "date"       : "2001-01-01 00:00:00 +0100",
       "order"      : "",
       "content"    : "<div id="desktopContent" class="content">  <div class="video">    <iframe width="560" height="315" src="https://www.youtube.com/embed/iUQq0br-Gjc" frameborder="0" allowfullscreen=""></iframe>  </div></div><div id="mobileContent" class="content"></div>"
@@ -27,7 +27,7 @@
       "category"   : "tutorials",
       "tags"       : "map_builder",
       "tags_order" : "",
-      "url"        : "/gfw-atlas/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis.html",
+      "url"        : "/developers-corner/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis.html",
       "date"       : "2001-01-01 00:00:00 +0100",
       "order"      : "",
       "content"    : "<div id="desktopContent" class="content">  <div class="video">    <iframe width="560" height="315" src="https://www.youtube.com/embed/u2CIfBU6RCs" frameborder="0" allowfullscreen=""></iframe>  </div></div><div id="mobileContent" class="content"></div>"
@@ -38,7 +38,7 @@
       "category"   : "tutorials",
       "tags"       : "map_builder",
       "tags_order" : "",
-      "url"        : "/gfw-atlas/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis-organizations.html",
+      "url"        : "/developers-corner/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis-organizations.html",
       "date"       : "2001-01-01 00:00:00 +0100",
       "order"      : "",
       "content"    : "<div id="desktopContent" class="content">  <div class="video">    <iframe width="560" height="315" src="https://www.youtube.com/embed/bujCMJwVRvU" frameborder="0" allowfullscreen=""></iframe>  </div></div><div id="mobileContent" class="content"></div>"
