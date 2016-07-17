@@ -239,7 +239,7 @@
 
 <section class="m-section -padding -border">
 	<div class="l-inner">
-	<header>		
+	<header>
 		<h2>Featured Maps</h2>
 		<p>A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!</p>
 	</header>
@@ -280,7 +280,7 @@
             
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">
-						  		<a href="http://gab.forest-atlas.org" target="_blank">					  			
+						  		<a href="http://gab.forest-atlas.org" target="_blank">
 										<div class="img" style="background-image: url(/assets/images/gallery/gabon-forest-atlas.png)"></div>
 										<h3 class="-primary">Gabon Forest Atlas</h3>
 						  		</a>
@@ -291,7 +291,7 @@
             
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">
-						  		<a href="http://gnq.forest-atlas.org" target="_blank">					  			
+						  		<a href="http://gnq.forest-atlas.org" target="_blank">
 										<div class="img" style="background-image: url(/assets/images/gallery/equatorial-guinea-forest-atlas.png)"></div>
 										<h3 class="-primary">Equatorial Guinea Forest Atlas</h3>
 						  		</a>
@@ -302,7 +302,7 @@
             
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">
-						  		<a href="http://cod.forest-atlas.org" target="_blank">					  			
+						  		<a href="http://cod.forest-atlas.org" target="_blank">
 										<div class="img" style="background-image: url(/assets/images/gallery/democratic-republic-congo-forest-atlas.png)"></div>
 										<h3 class="-primary">Democratic Republic of Congo Forest Atlas</h3>
 						  		</a>
@@ -315,7 +315,7 @@
             
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">
-						  		<a href="http://caf.forest-atlas.org" target="_blank">					  			
+						  		<a href="http://caf.forest-atlas.org" target="_blank">
 										<div class="img" style="background-image: url(/assets/images/gallery/central-african-republic-forest-atlas.png)"></div>
 										<h3 class="-primary">Central African Republic Forest Atlas</h3>
 						  		</a>
@@ -326,7 +326,7 @@
             
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">
-						  		<a href="http://cmr.forest-atlas.org" target="_blank">					  			
+						  		<a href="http://cmr.forest-atlas.org" target="_blank">
 										<div class="img" style="background-image: url(/assets/images/gallery/cameroon-forest-atlas.png)"></div>
 										<h3 class="-primary">Cameroon Forest Atlas</h3>
 						  		</a>
@@ -345,7 +345,7 @@
             
 						  <li class="js_slide">
 						  	<div class="m-card -atlas">
-						  		<a href="http://cog.forest-atlas.org" target="_blank">					  			
+						  		<a href="http://cog.forest-atlas.org" target="_blank">
 										<div class="img" style="background-image: url(/assets/images/gallery/republic-congo-forest-atlas.png)"></div>
 										<h3 class="-primary">Republic of Congo Forest Atlas</h3>
 						  		</a>
@@ -377,7 +377,7 @@
 		<div class="slider-arrows js_slide_navigation"></div>
 	</div>
 	<div class="btn-box -center">
-		<a href="mailto:gfw@wri.org" target="_blank" class="btn -primary -huge -m-fullwidth">Submit your map</a>
+		<a href="mailto:gfw@wri.org" onClick="ga('send', 'event', 'Map Builder', 'Submit your Map');" target="_blank" class="btn -primary -huge -m-fullwidth">Submit your map</a>
 		<a href="/gallery/" class="btn -huge -m-fullwidth">View all</a>
 	</div>
 </div>
@@ -389,6 +389,20 @@
     </div>
   </body>
 </html>
+
+<script type="text/javascript">
+  //Analytics
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48182293-1', document.location.hostname);
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+  ga('push','_trackPageview');
+</script>
+
 
 <script type="text/javascript">
   var baseurl = '';
