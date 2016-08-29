@@ -32,13 +32,13 @@
       "order"         : "",
       "source"        : "World Resources Institute and Aqueduct",
       "filters"       : "data, global-forest-watch, maps",
-      "coming_soon"   : "true",
+      "coming_soon"   : "",
       "description"   : "View critical watershed information, understand type and severity of threats such as forest changes to watershed health, and screen for cost-effective, sustainable solutions.",
       "content"       : "",
-      "href"          : "",
-      "href_text"     : "Coming soon",
+      "href"          : "http://water.globalforestwatch.org/",
+      "href_text"     : "Launch App",
       "href_target"   : "",
-      "href_class"    : "btn soon"
+      "href_class"    : "btn green medium mobile-friendly"
 
     } ,
   
