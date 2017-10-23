@@ -10,15 +10,38 @@
     <link rel="stylesheet" href="/css/main.css">
 
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,300' rel='stylesheet' type='text/css'>
-    
+
     <script type="text/javascript">
       window.liveSettings = {
         picker: '#transifexTranslateElement',
         api_key: "9eda410a7db74687ba40771c56abd357",
-        detectlang: false
+        detectlang: false,
+        site: 'gfw-atlas',
+        ribbon: 'Developers',
+        menuOptions:
+        {
+          options: [
+            {
+              title: 'logo',
+              url: '/'
+            },
+            {
+              title: 'Map builder',
+              url: '/map-builder'
+            },
+            {
+              title: 'Developer tools',
+              url: '/developer-tools'
+            },
+            {
+              title: 'Gallery',
+              url: '/gallery'
+            },
+          ]
+        }
       };
     </script>
-    <script id="loader-gfw" data-current=".shape-develop" src="http://gfw-assets.s3.amazonaws.com/static/gfw-assets.latest.js"></script>
+    <script id="loader-gfw" data-current=".shape-develop" src="http://gfw-assets.s3.amazonaws.com/static/gfw-assets.nightly.js"></script>
     <!-- IOS, Android, favicons icons -->
 <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-touch-icon-60x60.png">
@@ -189,24 +212,6 @@
     <div class="l-wrapper">
       <!-- HEADER -->
       <div id="headerGfw"></div>
-      <div class="l-menu">
-        <div class="l-inner">
-  <h1 class="l-logo">
-  	<a href="/">
-  		DEVELOPER’S CORNER
-  		<span class="ribbon"><span>Developers</span></span>
-  	</a>
-  </h1>
-  <nav id="menuView">
-    <ul>
-      <li><a data-page="map-builder" href="/map-builder/">Map builder</a></li>
-      <li><a data-page="developer-tools" href="/developer-tools/">Developer tools</a></li>
-      <li><a data-page="gallery" href="/gallery/">Gallery</a></li>
-    </ul>
-  </nav>
-</div>
-
-      </div>
       <div class="l-content">
         <header class="m-header-static">
 	<div class="l-inner">	
