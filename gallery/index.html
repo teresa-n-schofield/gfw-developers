@@ -22,20 +22,8 @@
           options: [
             {
               title: 'logo',
-              url: '/'
-            },
-            {
-              title: 'Map builder',
-              url: '/map-builder'
-            },
-            {
-              title: 'Developer tools',
-              url: '/developer-tools'
-            },
-            {
-              title: 'Gallery',
-              url: '/gallery'
-            },
+              url: 'http://www.globalforestwatch.org/'
+            }
           ]
         }
       };
@@ -212,14 +200,31 @@
       <!-- HEADER -->
       <div id="headerGfw"></div>
       <div class="l-content">
-        <header class="m-header-static">
-  <div class="l-inner">  
-    <h2>Gallery</h2>
-    <h3>Check out our hand-picked selection of maps and apps from others in the GFW community. Look here for inspiration, or submit your map to be featured.</h3>
-  </div>
-</header>
+        <section class="m-cover">
+	<div class="m-cover__text l-inner">
+		<div class="m-cover__title">Gallery</div>
+		<div class="m-cover__paragraph">Check out our hand-picked selection of maps and apps from others in the GFW community. Look here for inspiration, or submit your map to be featured.</div>
+	</div>
+	<div class="cover-background"></div>
+</section>
 
-<section id="galleryView" class="m-section -padding -border"></section>
+<div class="m-navigation">
+	<div class="l-inner">
+		<ul>
+			<li>
+				<a href="/map-builder">Map builder</a>
+			</li>
+			<li>
+				<a href="/developer-tools">Developer tools</a>
+			</li>
+			<li>
+				<a href="/gallery" class="-selected">Gallery</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<section id="galleryView" class="m-section -padding"></section>
 
 <section class="m-section -padding -border">
 	<div class="l-inner">
