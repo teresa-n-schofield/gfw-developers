@@ -81,17 +81,17 @@
     "uglify-js": "2.7.5",
     "unminified-webpack-plugin": "1.2.0",
     "url-loader": "0.5.7",
-    "webpack": "^2.4.1",
+    "webpack": "1.13.3",
     "webpack-dev-server": "1.16.2"
   },
   "scripts": {
     "clean": "rimraf dist/*",
-    "check": "yarn run lint -s && dependency-check package.json",
+    "check": "npm run lint -s && dependency-check package.json",
     "lint": "eslint src",
     "start": "better-npm-run start",
     "dev": "better-npm-run dev",
     "build": "better-npm-run build",
-    "travis": "yarn run build && yarn run karma-travis",
+    "travis": "npm run build && npm run karma-travis",
     "karma-sauce": "karma start saucelabs.karma.conf.js",
     "karma-travis": "karma start travis.karma.conf.js",
     "karma-local": "karma start local.karma.conf.js",
@@ -118,7 +118,7 @@
       }
     },
     "build": {
-      "command": "yarn run clean && better-npm-run compile",
+      "command": "npm run clean && better-npm-run compile",
       "env": {
         "NODE_ENV": "production",
         "DEBUG": "app:*"

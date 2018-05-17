@@ -10,7 +10,6 @@ Please visit: [http://meandmax.github.io/lory/](http://meandmax.github.io/lory/ 
 [![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/meandmax/lory/master/LICENSE)
 [![npm](http://img.shields.io/npm/v/lory.js.svg?style=flat)](https://www.npmjs.com/package/lory.js)
 [![CDNJS](https://img.shields.io/cdnjs/v/lory.js.svg)](https://cdnjs.com/libraries/lory.js/)
-[![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/lory.js/badge?style=rounded)](https://www.jsdelivr.com/package/npm/lory.js)
 
 [![build](http://img.shields.io/travis/meandmax/lory/master.svg?style=flat)](https://travis-ci.org/meandmax/lory)
 [![code climate](http://img.shields.io/codeclimate/github/meandmax/lory.svg?style=flat)](https://codeclimate.com/github/meandmax/lory)
@@ -31,10 +30,10 @@ There is also a prebundled CDN version which you can use.
 
 #### CDN: https://cdnjs.com/libraries/lory.js/
 
-## Install with yarn:
+## Install with node:
 
 ```
-yarn add lory.js
+npm install --save lory.js
 ```
 
 ## Consume it as an ES2015 module:
@@ -76,19 +75,19 @@ bower install lory --save
 ```
 // To install dev dependencies run:
 
-yarn
+npm install
 
 // To start the development server run:
 
-yarn run dev
+npm run dev
 
 // To lint your code run:
 
-yarn run lint
+npm run lint
 
 // To make a full new build run:
 
-yarn run build
+npm run build
 ```
 
 ## Run tests
@@ -96,11 +95,11 @@ yarn run build
 ```
 // To install dev dependencies run:
 
-yarn install
+npm install
 
 // To start the karma tests locally run:
 
-yarn run karma-local
+npm run karma-local
 ```
 
 <p align="center">
