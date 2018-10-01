@@ -216,26 +216,40 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     order: [
       "gfw-interactive-map",
       "countries",
-      "open-data-portal",
-      "fires",
-      "commodities",
+      "forest-watcher-mobile",
       "climate",
+      "commodities",
+      "fires",
+      "gfw-pro",
       "water",
-      "tomnod",
-      "open-landscape-platform",
-      "spott",
-      "maap",
+      "open-data-portal",
       "cameroon-forest-atlas",
       "central-african-republic-forest-atlas",
-      "republic-congo-forest-atlas",
       "democratic-republic-congo-forest-atlas",
       "equatorial-guinea-forest-atlas",
       "gabon-forest-atlas",
-      "open-foris",
-      "forest-watcher-mobile",
+      "georgia-forest-land-use",
+      "liberia-forest-atlas",
+      "madagascar-forest-atlas",
+      "republic-congo-forest-atlas",
       "logging-roads",
+      "alertas-tempranas-por-megaproyetos",
+      "bosques-abiertos",
+      "forests-and-finance",
+      "global-forest-link",
+      "high-conservation-value-forests",
+      "land-mark",
+      "maap",
+      "open-foris",
+      "open-landscape-platform",
+      "paraguay-indigenous-lands",
       "protecting-forest",
-      "gfw-pro"
+      "roundtable-on-sustainable-palm-oil",
+      "selva-maya",
+      "spott",
+      "systeme-de-suivi-de-la-degradation",
+      "tomnod",
+      "tropical-forest-alliance-2020"
     ],
 
     filters: {
@@ -249,7 +263,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       "global-forest-watch" : "Global Forest Watch",
       "latin-america" : "Latin America",
       "logging" : "Logging",
-      "map-builder" : "Map builder",
+      "map-builder" : "Map Builder",
       "maps" : "Maps",
       "mining" : "Mining",
       "mobile" : "Mobile",
@@ -275,16 +289,6 @@ Handlebars.registerHelper('deslugify', function (component, options) {
 
     getFilters: function() {
       return this.filters;
-      // var filters = _.pluck(this.toJSON(),'filters');
-      // // Get all the filters, trim white spaces, get the uniq values and sort them alphabetically
-      // var filter_slugs = _.sortBy(_.uniq(_.flatten(_.map(filters, function(el){
-      //   var arr = el.split(',');
-      //   return _.compact(_.map(arr,function(v) {
-      //     return $.trim(v);
-      //   }))
-      // }))));
-
-      // return filter_slugs;
     },
 
     filter: function(filter) {
@@ -316,6 +320,7 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     },
 
     initialize: function() {
+      this.setParams();
       this.setListeners();
 
       // Fetch collection
@@ -323,6 +328,13 @@ Handlebars.registerHelper('deslugify', function (component, options) {
       this.collection.fetch().done(function(){
         this.render(false);
       }.bind(this));
+    },
+
+    setParams: function() {
+      var filterParam = location.search.split('filter=')[1];
+      if (filterParam) {
+        this.model.set('filter', filterParam);
+      }
     },
 
     setListeners: function() {
@@ -385,7 +397,12 @@ Handlebars.registerHelper('deslugify', function (component, options) {
     changeFilter: function(e) {
       this.model.set('currentPage', 0, { silent:true });
       this.model.set('filter', $(e.currentTarget).data('value'));
+      this.setUrl();
       ga('send', 'event', 'Gallery', 'Tag Click', $(e.currentTarget).data('value'));
+    },
+
+    setUrl: function() {
+      window.history.pushState({}, '', '?filter=' + this.model.get('filter'));
     }
 
   });
