@@ -388,10 +388,10 @@
     } ,
   
     {
-      "title"    : "GFW Countries",
+      "title"    : "GFW Dashboards",
       "category" : "map-builder, gallery",
       "tags"     : "",
-      "url"      : "/map-builder/gallery/countries.html",
+      "url"      : "/map-builder/gallery/dashboards.html",
       "date"     : "2001-01-02 00:00:00 +0100",
       "content"  : ""
     } ,
@@ -433,7 +433,7 @@
     } ,
   
     {
-      "title"    : "GFW Interactive Map",
+      "title"    : "GFW Map",
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/gfw-interactive-map.html",
