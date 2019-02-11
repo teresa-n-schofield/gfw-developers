@@ -15,7 +15,6 @@ config.devtool = 'source-map';
 config.plugins = [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
       compress: {
         unused: true,
         dead_code: true,

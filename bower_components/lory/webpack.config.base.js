@@ -20,12 +20,10 @@ export default {
         "jquery.lory": "./src/jquery.lory.js"
     },
     module: {
-        rules: [
+        loaders: [
             {
                 exclude: /(node_modules|bower_components)/,
-                use: [
-                    'babel-loader'
-                ]
+                loader: 'babel'
             }
         ]
     },

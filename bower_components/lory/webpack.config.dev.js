@@ -13,23 +13,24 @@ config.plugins = [
     new HtmlWebpackPlugin({
         template: 'src/index.html'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
 ];
 
 config.entry.app = [];
 
-config.module.rules = config.module.rules.concat([
+config.module.loaders = config.module.loaders.concat([
     {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
     },
     {
         test: /\.html$/,
-        loader: 'html-loader'
+        loader: 'html'
     },
     {
         test: /\.(png|jpg)$/,
-        loader: 'url-loader'
+        loader: 'url'
     }
 ]);
 
