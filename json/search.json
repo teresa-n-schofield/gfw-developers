@@ -5,7 +5,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/tropical-forest-alliance-2020.html",
-      "date"     : "2004-01-02 00:00:00 +0000",
+      "date"     : "2004-01-02 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -14,7 +14,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/systeme-de-suivi-de-la-degradation.html",
-      "date"     : "2003-01-02 00:00:00 +0000",
+      "date"     : "2003-01-02 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -23,7 +23,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/roundtable-on-sustainable-palm-oil.html",
-      "date"     : "2002-01-02 00:00:00 +0000",
+      "date"     : "2002-01-02 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -32,7 +32,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/paraguay-indigenous-lands.html",
-      "date"     : "2002-01-01 00:00:00 +0000",
+      "date"     : "2002-01-01 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -41,7 +41,7 @@
       "category" : "developer-tools, develop",
       "tags"     : "style guide",
       "url"      : "/developer-tools/develop/style-guide.html",
-      "date"     : "2001-05-01 00:00:00 +0100",
+      "date"     : "2001-05-01 00:00:00 +0200",
       "content"  : "What developers need to know before they build a GFW apphttp://vizzuality.github.io/gfw-style-guides/"
     } ,
   
@@ -50,8 +50,8 @@
       "category" : "developer-tools, develop",
       "tags"     : "code",
       "url"      : "/developer-tools/develop/code.html",
-      "date"     : "2001-04-01 00:00:00 +0100",
-      "content"  : "  https://github.com/Vizzuality/gfw  https://github.com/Vizzuality/gfw-climate  https://github.com/wri/gfw-commodities-app  https://github.com/wri/gfw-fires-app  https://github.com/wri/gfw-water  https://github.com/wri/odp_front_end  https://github.com/wri/gfw-mapbuilder  https://github.com/forest-watcher  https://github.com/wri/arcpy_metadata  https://github.com/wri/gfw-analysis  https://github.com/wri/gfw-sync2"
+      "date"     : "2001-04-01 00:00:00 +0200",
+      "content"  : "  https://github.com/Vizzuality/gfw  https://github.com/Vizzuality/gfw-climate  https://github.com/wri/gfw-commodities-app  https://github.com/wri/gfw-fires-app  https://github.com/wri/odp_front_end  https://github.com/wri/gfw-mapbuilder  https://github.com/forest-watcher  https://github.com/wri/arcpy_metadata  https://github.com/wri/gfw-analysis  https://github.com/wri/gfw-sync2"
     } ,
   
     {
@@ -59,7 +59,7 @@
       "category" : "developer-tools, develop",
       "tags"     : "api",
       "url"      : "/developer-tools/develop/carbon-api.html",
-      "date"     : "2001-03-07 00:00:00 +0000",
+      "date"     : "2001-03-07 00:00:00 +0100",
       "content"  : "Works similar to the forest change API.Currently only ARCGIS API, Wrapper under development.Not yet documented."
     } ,
   
@@ -68,7 +68,7 @@
       "category" : "developer-tools, develop",
       "tags"     : "api",
       "url"      : "/developer-tools/develop/lancover-api.html",
-      "date"     : "2001-03-06 00:00:00 +0000",
+      "date"     : "2001-03-06 00:00:00 +0100",
       "content"  : "Works similar to the forest change API.Currently only ARCGIS API, Wrapper under development.Not yet documented."
     } ,
   
@@ -77,7 +77,7 @@
       "category" : "developer-tools, develop",
       "tags"     : "api",
       "url"      : "/developer-tools/develop/forest-change-biomass-api.html",
-      "date"     : "2001-03-05 00:00:00 +0000",
+      "date"     : "2001-03-05 00:00:00 +0100",
       "content"  : "Works similar to the forest change API.Currently only ARCGIS API, Wrapper under development.Not yet documented."
     } ,
   
@@ -86,7 +86,7 @@
       "category" : "developer-tools, develop",
       "tags"     : "api",
       "url"      : "/developer-tools/develop/forest-change-landcover-api.html",
-      "date"     : "2001-03-04 00:00:00 +0000",
+      "date"     : "2001-03-04 00:00:00 +0100",
       "content"  : "Works similar to the forest change API.Currently only ARCGIS API, Wrapper under development.Not yet documented."
     } ,
   
@@ -95,7 +95,7 @@
       "category" : "developer-tools, develop",
       "tags"     : "api",
       "url"      : "/developer-tools/develop/my-gfw-api.html",
-      "date"     : "2001-03-03 00:00:00 +0000",
+      "date"     : "2001-03-03 00:00:00 +0100",
       "content"  : "Subscribe to GFW alerts and manage your subscriptions using this API. This will allow users to access their subscriptions through other apps.Under development."
     } ,
   
@@ -104,7 +104,7 @@
       "category" : "developer-tools, develop",
       "tags"     : "api",
       "url"      : "/developer-tools/develop/metadata-api.html",
-      "date"     : "2001-03-02 00:00:00 +0000",
+      "date"     : "2001-03-02 00:00:00 +0100",
       "content"  : "http://api.globalforestwatch.org/metadataRetrieve full metadata for all GFW layers as JSON object. Soon also as XML object in ArcGIS, ISO and FGDC standard to use.(Not yet documented)"
     } ,
   
@@ -113,7 +113,7 @@
       "category" : "developer-tools, develop",
       "tags"     : "api",
       "url"      : "/developer-tools/develop/forest-change-api.html",
-      "date"     : "2001-03-01 00:00:00 +0000",
+      "date"     : "2001-03-01 00:00:00 +0100",
       "content"  : "http://api.globalforestwatch.org/forest-changeUsers can make calls to the GFW API and receive statistics on:	University of Maryland (UMD)/Google tree cover loss &amp; gain	FORMA alerts	IMAZON SAD alerts	QUICC alerts	Terra-i alerts	NASA active firesThey can post their own geometry, or use predefined geometries such as administrative boundaries, concessions or protected areas.They can also specify the time period for they are interested in.Full documentation of the calls are herehttps://github.com/gfw-api"
     } ,
   
@@ -122,7 +122,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/land-mark.html",
-      "date"     : "2001-01-31 00:00:00 +0000",
+      "date"     : "2001-01-31 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -131,7 +131,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/high-conservation-value-forests.html",
-      "date"     : "2001-01-30 00:00:00 +0000",
+      "date"     : "2001-01-30 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -140,7 +140,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/global-forest-link.html",
-      "date"     : "2001-01-29 00:00:00 +0000",
+      "date"     : "2001-01-29 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -149,7 +149,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/forests-and-finance.html",
-      "date"     : "2001-01-28 00:00:00 +0000",
+      "date"     : "2001-01-28 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -158,7 +158,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/selva-maya.html",
-      "date"     : "2001-01-27 00:00:00 +0000",
+      "date"     : "2001-01-27 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -167,7 +167,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/bosques-abiertos.html",
-      "date"     : "2001-01-27 00:00:00 +0000",
+      "date"     : "2001-01-27 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -176,7 +176,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/alertas-tempranas-por-megaproyetos.html",
-      "date"     : "2001-01-26 00:00:00 +0000",
+      "date"     : "2001-01-26 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -185,7 +185,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/madagascar-forest-atlas.html",
-      "date"     : "2001-01-25 00:00:00 +0000",
+      "date"     : "2001-01-25 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -194,7 +194,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/liberia-forest-atlas.html",
-      "date"     : "2001-01-24 00:00:00 +0000",
+      "date"     : "2001-01-24 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -203,7 +203,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/georgia-forest-land-use.html",
-      "date"     : "2001-01-23 00:00:00 +0000",
+      "date"     : "2001-01-23 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -212,7 +212,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/gfw-pro.html",
-      "date"     : "2001-01-22 00:00:00 +0000",
+      "date"     : "2001-01-22 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -221,16 +221,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/protecting-forest.html",
-      "date"     : "2001-01-21 00:00:00 +0000",
-      "content"  : ""
-    } ,
-  
-    {
-      "title"    : "GFW Water",
-      "category" : "map-builder, gallery",
-      "tags"     : "",
-      "url"      : "/map-builder/gallery/water.html",
-      "date"     : "2001-01-20 00:00:00 +0000",
+      "date"     : "2001-01-21 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -239,7 +230,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/logging-roads.html",
-      "date"     : "2001-01-19 00:00:00 +0000",
+      "date"     : "2001-01-19 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -248,7 +239,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/forest-watcher-mobile.html",
-      "date"     : "2001-01-18 00:00:00 +0000",
+      "date"     : "2001-01-18 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -257,7 +248,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/open-foris.html",
-      "date"     : "2001-01-17 00:00:00 +0000",
+      "date"     : "2001-01-17 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -266,7 +257,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/gabon-forest-atlas.html",
-      "date"     : "2001-01-16 00:00:00 +0000",
+      "date"     : "2001-01-16 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -275,7 +266,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/equatorial-guinea-forest-atlas.html",
-      "date"     : "2001-01-15 00:00:00 +0000",
+      "date"     : "2001-01-15 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -284,7 +275,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/democratic-republic-congo-forest-atlas.html",
-      "date"     : "2001-01-14 00:00:00 +0000",
+      "date"     : "2001-01-14 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -293,7 +284,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/republic-congo-forest-atlas.html",
-      "date"     : "2001-01-13 00:00:00 +0000",
+      "date"     : "2001-01-13 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -302,7 +293,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/central-african-republic-forest-atlas.html",
-      "date"     : "2001-01-12 00:00:00 +0000",
+      "date"     : "2001-01-12 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -311,7 +302,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/cameroon-forest-atlas.html",
-      "date"     : "2001-01-11 00:00:00 +0000",
+      "date"     : "2001-01-11 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -320,7 +311,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/maap.html",
-      "date"     : "2001-01-10 00:00:00 +0000",
+      "date"     : "2001-01-10 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -329,7 +320,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/spott.html",
-      "date"     : "2001-01-09 00:00:00 +0000",
+      "date"     : "2001-01-09 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -338,7 +329,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/open-landscape-platform.html",
-      "date"     : "2001-01-08 00:00:00 +0000",
+      "date"     : "2001-01-08 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -347,7 +338,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/tomnod.html",
-      "date"     : "2001-01-07 00:00:00 +0000",
+      "date"     : "2001-01-07 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -356,7 +347,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/climate.html",
-      "date"     : "2001-01-06 00:00:00 +0000",
+      "date"     : "2001-01-06 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -365,7 +356,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/commodities.html",
-      "date"     : "2001-01-05 00:00:00 +0000",
+      "date"     : "2001-01-05 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -374,7 +365,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/fires.html",
-      "date"     : "2001-01-04 00:00:00 +0000",
+      "date"     : "2001-01-04 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -383,7 +374,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/open-data-portal.html",
-      "date"     : "2001-01-03 00:00:00 +0000",
+      "date"     : "2001-01-03 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -392,7 +383,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/dashboards.html",
-      "date"     : "2001-01-02 00:00:00 +0000",
+      "date"     : "2001-01-02 00:00:00 +0100",
       "content"  : ""
     } ,
   
@@ -401,7 +392,7 @@
       "category" : "tutorials",
       "tags"     : "map_builder",
       "url"      : "/tutorials/tutorial-map-builder-map-builder-interactive-map-overview.html",
-      "date"     : "2001-01-01 00:00:00 +0000",
+      "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "        "
     } ,
   
@@ -410,7 +401,7 @@
       "category" : "tutorials",
       "tags"     : "map_builder",
       "url"      : "/tutorials/tutorial-map-builder-create-a-web-map-in-arcgis-online.html",
-      "date"     : "2001-01-01 00:00:00 +0000",
+      "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "        "
     } ,
   
@@ -419,7 +410,7 @@
       "category" : "tutorials",
       "tags"     : "map_builder",
       "url"      : "/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis.html",
-      "date"     : "2001-01-01 00:00:00 +0000",
+      "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "        "
     } ,
   
@@ -428,7 +419,7 @@
       "category" : "tutorials",
       "tags"     : "map_builder",
       "url"      : "/tutorials/tutorial-map-builder-build-a-custom-web-app-in-arcgis-organizations.html",
-      "date"     : "2001-01-01 00:00:00 +0000",
+      "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : "        "
     } ,
   
@@ -437,7 +428,7 @@
       "category" : "map-builder, gallery",
       "tags"     : "",
       "url"      : "/map-builder/gallery/gfw-interactive-map.html",
-      "date"     : "2001-01-01 00:00:00 +0000",
+      "date"     : "2001-01-01 00:00:00 +0100",
       "content"  : ""
     } 
   
@@ -491,7 +482,7 @@
         "tags"     : "",
         "url"      : "/map-builder/",
         "date"     : "",
-        "content"  : "						Developer Tools			Explore tools and information available to help you develop applications that harness Global Forest Watch data and technology, like the GFW API and Map Builder.														Gallery										Map Builder										Developer tools												Want to create your own version of Global Forest Watch, featuring a specific location or type of data? Map Builder is an easy tool to help you build your own mapping portal, complete with powerful analytical tools.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch – or upload your own.														Powerful analysis				Add tools for statistical and geospatial analyses that run right in your browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add them to the map gallery.										Start Building Your Map		Here’s your 1-2-3 guide on getting started.															  													1							Watch the tutorial videos							These step-by-step guides will teach you how to set up an ArcGIS Online user account, produce a basic interactive map, and share your map online.										  				  													2							Create a map							Add data layers to the map canvas, and start styling. All of your progress will be saved to your account, so you can work at your own pace.										  				  													3							Share your forest atlas							Use integrated social media tools to share your interactive map with your networks, export the map as a static image, or submit it into the map gallery.										  															Get started					Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        						  						  							  																						Gabon Forest Atlas						  								  							                                    						  						  							  																						Equatorial Guinea Forest Atlas						  								  							                                    						  						  							  																						Democratic Republic of Congo Forest Atlas						  								  							                                    						  						  							  																						Republic of Congo Forest Atlas						  								  							                                    						  						  							  																						Central African Republic Forest Atlas						  								  							                                    						  						  							  																						Cameroon Forest Atlas						  								  							                                                                                                                                                                                                                                                                                                                                            															Submit your map		View all					Tutorials		Just getting started? Or need some help? Our tutorials will get you pointed in the right direction.														                                                                                                                                                                                                          						  						  																			Map Builder Interactive Map Overview															  							                                    						  						  																			Create a Web Map in ArcGIS Online															  							                                    						  						  																			Build a Custom Web App in ArcGIS (for public accounts)															  							                                    						  						  																			Build a Custom Web App in ArcGIS (for organizational accounts)															  							                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      															View all	"
+        "content"  : "						Developer Tools			Explore tools and information available to help you develop applications that harness Global Forest Watch data and technology, like the GFW API and Map Builder.														Gallery										Map Builder										Developer tools												Want to create your own version of Global Forest Watch, featuring a specific location or type of data? Map Builder is an easy tool to help you build your own mapping portal, complete with powerful analytical tools.															Compelling data				Choose from dozens of data layers curated by Global Forest Watch – or upload your own.														Powerful analysis				Add tools for statistical and geospatial analyses that run right in your browser.														Proven platform				My Forest Atlas is built on ESRI’s easy-to-use ArcGIS Online mapping platform.														Broad reach				Share your maps with integrated social media tools, or add them to the map gallery.										Start Building Your Map		Here’s your 1-2-3 guide on getting started.															  													1							Watch the tutorial videos							These step-by-step guides will teach you how to set up an ArcGIS Online user account, produce a basic interactive map, and share your map online.										  				  													2							Create a map							Add data layers to the map canvas, and start styling. All of your progress will be saved to your account, so you can work at your own pace.										  				  													3							Share your forest atlas							Use integrated social media tools to share your interactive map with your networks, export the map as a static image, or submit it into the map gallery.										  															Get started					Featured Maps		A hand-picked selection of GFW maps and applications built by our user community. Imagine your map or app here!														                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  						  						  							  																						Gabon Forest Atlas						  								  							                                    						  						  							  																						Equatorial Guinea Forest Atlas						  								  							                                    						  						  							  																						Democratic Republic of Congo Forest Atlas						  								  							                                    						  						  							  																						Republic of Congo Forest Atlas						  								  							                                    						  						  							  																						Central African Republic Forest Atlas						  								  							                                    						  						  							  																						Cameroon Forest Atlas						  								  							                                                                                                                                                                                                                                                                                                                                            															Submit your map		View all					Tutorials		Just getting started? Or need some help? Our tutorials will get you pointed in the right direction.														                                                                                                                                                                                                          						  						  																			Map Builder Interactive Map Overview															  							                                    						  						  																			Create a Web Map in ArcGIS Online															  							                                    						  						  																			Build a Custom Web App in ArcGIS (for public accounts)															  							                                    						  						  																			Build a Custom Web App in ArcGIS (for organizational accounts)															  							                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                															View all	"
      
    } ,
   
