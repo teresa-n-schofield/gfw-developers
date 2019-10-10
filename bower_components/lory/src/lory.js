@@ -1,6 +1,7 @@
 /* globals jQuery */
 
 import detectPrefixes from './utils/detect-prefixes.js';
+import supportsPassive from './utils/detect-supportsPassive';
 import dispatchEvent from './utils/dispatch-event.js';
 import defaults from './defaults.js';
 
@@ -24,6 +25,7 @@ export function lory (slider, opts) {
 
     let index   = 0;
     let options = {};
+    let touchEventParams = supportsPassive() ? { passive: true } : false;
 
     /**
      * if object is jQuery convert to native DOM element
@@ -100,13 +102,15 @@ export function lory (slider, opts) {
         if (style) {
             style[prefixes.transition + 'TimingFunction'] = ease;
             style[prefixes.transition + 'Duration'] = duration + 'ms';
-
-            if (prefixes.hasTranslate3d) {
-                style[prefixes.transform] = 'translate3d(' + to + 'px, 0, 0)';
-            } else {
-                style[prefixes.transform] = 'translate(' + to + 'px, 0)';
-            }
+            style[prefixes.transform] = 'translateX(' + to + 'px)';
         }
+    }
+
+    /**
+     * returns an element's width
+     */
+    function elementWidth (element) {
+        return element.getBoundingClientRect().width || element.offsetWidth;
     }
 
     /**
@@ -123,9 +127,12 @@ export function lory (slider, opts) {
             slidesToScroll,
             infinite,
             rewind,
+            rewindPrev,
             rewindSpeed,
             ease,
-            classNameActiveSlide
+            classNameActiveSlide,
+            classNameDisabledNextCtrl = 'disabled',
+            classNameDisabledPrevCtrl = 'disabled'
         } = options;
 
         let duration = slideSpeed;
@@ -142,17 +149,25 @@ export function lory (slider, opts) {
          * Reset control classes
          */
         if (prevCtrl) {
-            prevCtrl.classList.remove('disabled');
+            prevCtrl.classList.remove(classNameDisabledPrevCtrl);
         }
         if (nextCtrl) {
-            nextCtrl.classList.remove('disabled');
+            nextCtrl.classList.remove(classNameDisabledNextCtrl);
         }
 
         if (typeof nextIndex !== 'number') {
             if (direction) {
-                nextIndex = index + slidesToScroll;
+              if (infinite && index + (infinite * 2) !== slides.length) {
+                  nextIndex = index + (infinite - index % infinite);
+              } else {
+                  nextIndex = index + slidesToScroll;
+              }
             } else {
-                nextIndex = index - slidesToScroll;
+              if (infinite && index % infinite !== 0) {
+                  nextIndex = index - index % infinite;
+              } else {
+                  nextIndex = index - slidesToScroll;
+              }
             }
         }
 
@@ -160,6 +175,11 @@ export function lory (slider, opts) {
 
         if (infinite && direction === undefined) {
             nextIndex += infinite;
+        }
+
+        if (rewindPrev && Math.abs(position.x) === 0 && direction === false) {
+            nextIndex = slides.length - 1;
+            duration = rewindSpeed;
         }
 
         let nextOffset = Math.min(Math.max(slides[nextIndex].offsetLeft * -1, maxOffset * -1), 0);
@@ -188,7 +208,8 @@ export function lory (slider, opts) {
             index = nextIndex;
         }
 
-        if (infinite && (nextIndex === slides.length - infinite || nextIndex === 0)) {
+        if (infinite && (nextIndex === slides.length - infinite ||
+            nextIndex === slides.length - slides.length % infinite || nextIndex === 0)) {
             if (direction) {
                 index = infinite;
             }
@@ -212,12 +233,12 @@ export function lory (slider, opts) {
          * update classes for next and prev arrows
          * based on user settings
          */
-        if (prevCtrl && !infinite && nextIndex === 0) {
-            prevCtrl.classList.add('disabled');
+        if (prevCtrl && !infinite && !rewindPrev && nextIndex === 0) {
+            prevCtrl.classList.add(classNameDisabledPrevCtrl);
         }
 
         if (nextCtrl && !infinite && !rewind && ((nextIndex + 1) === slides.length)) {
-            nextCtrl.classList.add('disabled');
+            nextCtrl.classList.add(classNameDisabledNextCtrl);
         }
 
         dispatchSliderEvent('after', 'slide', {
@@ -240,10 +261,14 @@ export function lory (slider, opts) {
             classNameSlideContainer,
             classNamePrevCtrl,
             classNameNextCtrl,
+            classNameDisabledNextCtrl = 'disabled',
+            classNameDisabledPrevCtrl = 'disabled',
             enableMouseEvents,
-            classNameActiveSlide
+            classNameActiveSlide,
+            initialIndex
         } = options;
 
+        index = initialIndex;
         frame = slider.getElementsByClassName(classNameFrame)[0];
         slideContainer = frame.getElementsByClassName(classNameSlideContainer)[0];
         prevCtrl = slider.getElementsByClassName(classNamePrevCtrl)[0];
@@ -259,12 +284,12 @@ export function lory (slider, opts) {
         } else {
             slides = slice.call(slideContainer.children);
 
-            if (prevCtrl) {
-                prevCtrl.classList.add('disabled');
+            if (prevCtrl && !options.rewindPrev) {
+                prevCtrl.classList.add(classNameDisabledPrevCtrl);
             }
 
             if (nextCtrl && (slides.length === 1) && !options.rewind) {
-                nextCtrl.classList.add('disabled');
+                nextCtrl.classList.add(classNameDisabledNextCtrl);
             }
         }
 
@@ -279,7 +304,7 @@ export function lory (slider, opts) {
             nextCtrl.addEventListener('click', next);
         }
 
-        frame.addEventListener('touchstart', onTouchstart);
+        frame.addEventListener('touchstart', onTouchstart, touchEventParams);
 
         if (enableMouseEvents) {
             frame.addEventListener('mousedown', onTouchstart);
@@ -296,21 +321,19 @@ export function lory (slider, opts) {
      * reset function: called on resize
      */
     function reset () {
-        var {infinite, ease, rewindSpeed, rewindOnResize, classNameActiveSlide} = options;
+        var {infinite, ease, rewindSpeed, rewindOnResize, classNameActiveSlide, initialIndex} = options;
 
-        slidesWidth = slideContainer.getBoundingClientRect()
-            .width || slideContainer.offsetWidth;
-        frameWidth = frame.getBoundingClientRect()
-            .width || frame.offsetWidth;
+        slidesWidth = elementWidth(slideContainer);
+        frameWidth = elementWidth(frame);
 
         if (frameWidth === slidesWidth) {
             slidesWidth = slides.reduce(function (previousValue, slide) {
-                return previousValue + slide.getBoundingClientRect().width || slide.offsetWidth;
+                return previousValue + elementWidth(slide);
             }, 0);
         }
 
         if (rewindOnResize) {
-            index = 0;
+            index = initialIndex;
         } else {
             ease = null;
             rewindSpeed = 0;
@@ -372,8 +395,8 @@ export function lory (slider, opts) {
 
         // remove event listeners
         frame.removeEventListener(prefixes.transitionEnd, onTransitionEnd);
-        frame.removeEventListener('touchstart', onTouchstart);
-        frame.removeEventListener('touchmove', onTouchmove);
+        frame.removeEventListener('touchstart', onTouchstart, touchEventParams);
+        frame.removeEventListener('touchmove', onTouchmove, touchEventParams);
         frame.removeEventListener('touchend', onTouchend);
         frame.removeEventListener('mousemove', onTouchmove);
         frame.removeEventListener('mousedown', onTouchstart);
@@ -426,7 +449,7 @@ export function lory (slider, opts) {
             frame.addEventListener('mouseleave', onTouchend);
         }
 
-        frame.addEventListener('touchmove', onTouchmove);
+        frame.addEventListener('touchmove', onTouchmove, touchEventParams);
         frame.addEventListener('touchend', onTouchend);
 
         const {pageX, pageY} = touches;
@@ -460,7 +483,6 @@ export function lory (slider, opts) {
         }
 
         if (!isScrolling && touchOffset) {
-            event.preventDefault();
             translate(position.x + delta.x, 0, null);
         }
 
@@ -537,11 +559,13 @@ export function lory (slider, opts) {
     }
 
     function onResize (event) {
-        reset();
+        if (frameWidth !== elementWidth(frame)) {
+            reset();
 
-        dispatchSliderEvent('on', 'resize', {
-            event
-        });
+            dispatchSliderEvent('on', 'resize', {
+                event
+            });
+        }
     }
 
     // trigger initial setup

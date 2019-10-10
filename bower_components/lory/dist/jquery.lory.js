@@ -7,7 +7,7 @@
 		var a = factory();
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function() {
+})(typeof self !== 'undefined' ? self : this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -43,9 +43,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -73,38 +70,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -118,15 +88,19 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 exports.lory = lory;
 
-var _detectPrefixes = __webpack_require__(3);
+var _detectPrefixes = __webpack_require__(1);
 
 var _detectPrefixes2 = _interopRequireDefault(_detectPrefixes);
 
-var _dispatchEvent = __webpack_require__(4);
+var _detectSupportsPassive = __webpack_require__(2);
+
+var _detectSupportsPassive2 = _interopRequireDefault(_detectSupportsPassive);
+
+var _dispatchEvent = __webpack_require__(3);
 
 var _dispatchEvent2 = _interopRequireDefault(_dispatchEvent);
 
-var _defaults = __webpack_require__(2);
+var _defaults = __webpack_require__(6);
 
 var _defaults2 = _interopRequireDefault(_defaults);
 
@@ -152,6 +126,7 @@ function lory(slider, opts) {
 
     var index = 0;
     var options = {};
+    var touchEventParams = (0, _detectSupportsPassive2.default)() ? { passive: true } : false;
 
     /**
      * if object is jQuery convert to native DOM element
@@ -231,13 +206,15 @@ function lory(slider, opts) {
         if (style) {
             style[prefixes.transition + 'TimingFunction'] = ease;
             style[prefixes.transition + 'Duration'] = duration + 'ms';
-
-            if (prefixes.hasTranslate3d) {
-                style[prefixes.transform] = 'translate3d(' + to + 'px, 0, 0)';
-            } else {
-                style[prefixes.transform] = 'translate(' + to + 'px, 0)';
-            }
+            style[prefixes.transform] = 'translateX(' + to + 'px)';
         }
+    }
+
+    /**
+     * returns an element's width
+     */
+    function elementWidth(element) {
+        return element.getBoundingClientRect().width || element.offsetWidth;
     }
 
     /**
@@ -254,9 +231,14 @@ function lory(slider, opts) {
             slidesToScroll = _options3.slidesToScroll,
             infinite = _options3.infinite,
             rewind = _options3.rewind,
+            rewindPrev = _options3.rewindPrev,
             rewindSpeed = _options3.rewindSpeed,
             ease = _options3.ease,
-            classNameActiveSlide = _options3.classNameActiveSlide;
+            classNameActiveSlide = _options3.classNameActiveSlide,
+            _options3$classNameDi = _options3.classNameDisabledNextCtrl,
+            classNameDisabledNextCtrl = _options3$classNameDi === undefined ? 'disabled' : _options3$classNameDi,
+            _options3$classNameDi2 = _options3.classNameDisabledPrevCtrl,
+            classNameDisabledPrevCtrl = _options3$classNameDi2 === undefined ? 'disabled' : _options3$classNameDi2;
 
 
         var duration = slideSpeed;
@@ -273,17 +255,25 @@ function lory(slider, opts) {
          * Reset control classes
          */
         if (prevCtrl) {
-            prevCtrl.classList.remove('disabled');
+            prevCtrl.classList.remove(classNameDisabledPrevCtrl);
         }
         if (nextCtrl) {
-            nextCtrl.classList.remove('disabled');
+            nextCtrl.classList.remove(classNameDisabledNextCtrl);
         }
 
         if (typeof nextIndex !== 'number') {
             if (direction) {
-                nextIndex = index + slidesToScroll;
+                if (infinite && index + infinite * 2 !== slides.length) {
+                    nextIndex = index + (infinite - index % infinite);
+                } else {
+                    nextIndex = index + slidesToScroll;
+                }
             } else {
-                nextIndex = index - slidesToScroll;
+                if (infinite && index % infinite !== 0) {
+                    nextIndex = index - index % infinite;
+                } else {
+                    nextIndex = index - slidesToScroll;
+                }
             }
         }
 
@@ -291,6 +281,11 @@ function lory(slider, opts) {
 
         if (infinite && direction === undefined) {
             nextIndex += infinite;
+        }
+
+        if (rewindPrev && Math.abs(position.x) === 0 && direction === false) {
+            nextIndex = slides.length - 1;
+            duration = rewindSpeed;
         }
 
         var nextOffset = Math.min(Math.max(slides[nextIndex].offsetLeft * -1, maxOffset * -1), 0);
@@ -319,7 +314,7 @@ function lory(slider, opts) {
             index = nextIndex;
         }
 
-        if (infinite && (nextIndex === slides.length - infinite || nextIndex === 0)) {
+        if (infinite && (nextIndex === slides.length - infinite || nextIndex === slides.length - slides.length % infinite || nextIndex === 0)) {
             if (direction) {
                 index = infinite;
             }
@@ -343,12 +338,12 @@ function lory(slider, opts) {
          * update classes for next and prev arrows
          * based on user settings
          */
-        if (prevCtrl && !infinite && nextIndex === 0) {
-            prevCtrl.classList.add('disabled');
+        if (prevCtrl && !infinite && !rewindPrev && nextIndex === 0) {
+            prevCtrl.classList.add(classNameDisabledPrevCtrl);
         }
 
         if (nextCtrl && !infinite && !rewind && nextIndex + 1 === slides.length) {
-            nextCtrl.classList.add('disabled');
+            nextCtrl.classList.add(classNameDisabledNextCtrl);
         }
 
         dispatchSliderEvent('after', 'slide', {
@@ -371,10 +366,16 @@ function lory(slider, opts) {
             classNameSlideContainer = _options4.classNameSlideContainer,
             classNamePrevCtrl = _options4.classNamePrevCtrl,
             classNameNextCtrl = _options4.classNameNextCtrl,
+            _options4$classNameDi = _options4.classNameDisabledNextCtrl,
+            classNameDisabledNextCtrl = _options4$classNameDi === undefined ? 'disabled' : _options4$classNameDi,
+            _options4$classNameDi2 = _options4.classNameDisabledPrevCtrl,
+            classNameDisabledPrevCtrl = _options4$classNameDi2 === undefined ? 'disabled' : _options4$classNameDi2,
             enableMouseEvents = _options4.enableMouseEvents,
-            classNameActiveSlide = _options4.classNameActiveSlide;
+            classNameActiveSlide = _options4.classNameActiveSlide,
+            initialIndex = _options4.initialIndex;
 
 
+        index = initialIndex;
         frame = slider.getElementsByClassName(classNameFrame)[0];
         slideContainer = frame.getElementsByClassName(classNameSlideContainer)[0];
         prevCtrl = slider.getElementsByClassName(classNamePrevCtrl)[0];
@@ -390,12 +391,12 @@ function lory(slider, opts) {
         } else {
             slides = slice.call(slideContainer.children);
 
-            if (prevCtrl) {
-                prevCtrl.classList.add('disabled');
+            if (prevCtrl && !options.rewindPrev) {
+                prevCtrl.classList.add(classNameDisabledPrevCtrl);
             }
 
             if (nextCtrl && slides.length === 1 && !options.rewind) {
-                nextCtrl.classList.add('disabled');
+                nextCtrl.classList.add(classNameDisabledNextCtrl);
             }
         }
 
@@ -410,7 +411,7 @@ function lory(slider, opts) {
             nextCtrl.addEventListener('click', next);
         }
 
-        frame.addEventListener('touchstart', onTouchstart);
+        frame.addEventListener('touchstart', onTouchstart, touchEventParams);
 
         if (enableMouseEvents) {
             frame.addEventListener('mousedown', onTouchstart);
@@ -432,20 +433,21 @@ function lory(slider, opts) {
             ease = _options5.ease,
             rewindSpeed = _options5.rewindSpeed,
             rewindOnResize = _options5.rewindOnResize,
-            classNameActiveSlide = _options5.classNameActiveSlide;
+            classNameActiveSlide = _options5.classNameActiveSlide,
+            initialIndex = _options5.initialIndex;
 
 
-        slidesWidth = slideContainer.getBoundingClientRect().width || slideContainer.offsetWidth;
-        frameWidth = frame.getBoundingClientRect().width || frame.offsetWidth;
+        slidesWidth = elementWidth(slideContainer);
+        frameWidth = elementWidth(frame);
 
         if (frameWidth === slidesWidth) {
             slidesWidth = slides.reduce(function (previousValue, slide) {
-                return previousValue + slide.getBoundingClientRect().width || slide.offsetWidth;
+                return previousValue + elementWidth(slide);
             }, 0);
         }
 
         if (rewindOnResize) {
-            index = 0;
+            index = initialIndex;
         } else {
             ease = null;
             rewindSpeed = 0;
@@ -507,8 +509,8 @@ function lory(slider, opts) {
 
         // remove event listeners
         frame.removeEventListener(prefixes.transitionEnd, onTransitionEnd);
-        frame.removeEventListener('touchstart', onTouchstart);
-        frame.removeEventListener('touchmove', onTouchmove);
+        frame.removeEventListener('touchstart', onTouchstart, touchEventParams);
+        frame.removeEventListener('touchmove', onTouchmove, touchEventParams);
         frame.removeEventListener('touchend', onTouchend);
         frame.removeEventListener('mousemove', onTouchmove);
         frame.removeEventListener('mousedown', onTouchstart);
@@ -563,7 +565,7 @@ function lory(slider, opts) {
             frame.addEventListener('mouseleave', onTouchend);
         }
 
-        frame.addEventListener('touchmove', onTouchmove);
+        frame.addEventListener('touchmove', onTouchmove, touchEventParams);
         frame.addEventListener('touchend', onTouchend);
 
         var pageX = touches.pageX,
@@ -601,7 +603,6 @@ function lory(slider, opts) {
         }
 
         if (!isScrolling && touchOffset) {
-            event.preventDefault();
             translate(position.x + delta.x, 0, null);
         }
 
@@ -675,11 +676,13 @@ function lory(slider, opts) {
     }
 
     function onResize(event) {
-        reset();
+        if (frameWidth !== elementWidth(frame)) {
+            reset();
 
-        dispatchSliderEvent('on', 'resize', {
-            event: event
-        });
+            dispatchSliderEvent('on', 'resize', {
+                event: event
+            });
+        }
     }
 
     // trigger initial setup
@@ -698,7 +701,211 @@ function lory(slider, opts) {
 }
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = detectPrefixes;
+/**
+ * Detecting prefixes for saving time and bytes
+ */
+function detectPrefixes() {
+    var transform = void 0;
+    var transition = void 0;
+    var transitionEnd = void 0;
+
+    (function () {
+        var el = document.createElement('_');
+        var style = el.style;
+
+        var prop = void 0;
+
+        if (style[prop = 'webkitTransition'] === '') {
+            transitionEnd = 'webkitTransitionEnd';
+            transition = prop;
+        }
+
+        if (style[prop = 'transition'] === '') {
+            transitionEnd = 'transitionend';
+            transition = prop;
+        }
+
+        if (style[prop = 'webkitTransform'] === '') {
+            transform = prop;
+        }
+
+        if (style[prop = 'msTransform'] === '') {
+            transform = prop;
+        }
+
+        if (style[prop = 'transform'] === '') {
+            transform = prop;
+        }
+
+        document.body.insertBefore(el, null);
+        style[transform] = 'translateX(0)';
+        document.body.removeChild(el);
+    })();
+
+    return {
+        transform: transform,
+        transition: transition,
+        transitionEnd: transitionEnd
+    };
+}
+
+/***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = detectSupportsPassive;
+function detectSupportsPassive() {
+    var supportsPassive = false;
+
+    try {
+        var opts = Object.defineProperty({}, 'passive', {
+            get: function get() {
+                supportsPassive = true;
+            }
+        });
+
+        window.addEventListener('testPassive', null, opts);
+        window.removeEventListener('testPassive', null, opts);
+    } catch (e) {}
+
+    return supportsPassive;
+}
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = dispatchEvent;
+
+var _customEvent = __webpack_require__(4);
+
+var _customEvent2 = _interopRequireDefault(_customEvent);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * dispatch custom events
+ *
+ * @param  {element} el         slideshow element
+ * @param  {string}  type       custom event name
+ * @param  {object}  detail     custom detail information
+ */
+function dispatchEvent(target, type, detail) {
+    var event = new _customEvent2.default(type, {
+        bubbles: true,
+        cancelable: true,
+        detail: detail
+    });
+
+    target.dispatchEvent(event);
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {
+var NativeCustomEvent = global.CustomEvent;
+
+function useNative () {
+  try {
+    var p = new NativeCustomEvent('cat', { detail: { foo: 'bar' } });
+    return  'cat' === p.type && 'bar' === p.detail.foo;
+  } catch (e) {
+  }
+  return false;
+}
+
+/**
+ * Cross-browser `CustomEvent` constructor.
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent.CustomEvent
+ *
+ * @public
+ */
+
+module.exports = useNative() ? NativeCustomEvent :
+
+// IE >= 9
+'undefined' !== typeof document && 'function' === typeof document.createEvent ? function CustomEvent (type, params) {
+  var e = document.createEvent('CustomEvent');
+  if (params) {
+    e.initCustomEvent(type, params.bubbles, params.cancelable, params.detail);
+  } else {
+    e.initCustomEvent(type, false, false, void 0);
+  }
+  return e;
+} :
+
+// IE <= 8
+function CustomEvent (type, params) {
+  var e = document.createEventObject();
+  e.type = type;
+  if (params) {
+    e.bubbles = Boolean(params.bubbles);
+    e.cancelable = Boolean(params.cancelable);
+    e.detail = params.detail;
+  } else {
+    e.bubbles = false;
+    e.cancelable = false;
+    e.detail = void 0;
+  }
+  return e;
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -754,6 +961,12 @@ exports.default = {
   infinite: false,
 
   /**
+   * the slide index to show when the slider is initialized.
+   * @initialIndex {number}
+   */
+  initialIndex: 0,
+
+  /**
    * class name for slider frame
    * @classNameFrame {string}
    */
@@ -794,7 +1007,7 @@ exports.default = {
    * window instance
    * @window {object}
    */
-  window: window,
+  window: typeof window !== 'undefined' ? window : null,
 
   /**
    * If false, slides lory to the first slide on window resize.
@@ -804,166 +1017,14 @@ exports.default = {
 };
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = detectPrefixes;
-/**
- * Detecting prefixes for saving time and bytes
- */
-function detectPrefixes() {
-    var transform = void 0;
-    var transition = void 0;
-    var transitionEnd = void 0;
-    var hasTranslate3d = void 0;
-
-    (function () {
-        var el = document.createElement('_');
-        var style = el.style;
-
-        var prop = void 0;
-
-        if (style[prop = 'webkitTransition'] === '') {
-            transitionEnd = 'webkitTransitionEnd';
-            transition = prop;
-        }
-
-        if (style[prop = 'transition'] === '') {
-            transitionEnd = 'transitionend';
-            transition = prop;
-        }
-
-        if (style[prop = 'webkitTransform'] === '') {
-            transform = prop;
-        }
-
-        if (style[prop = 'msTransform'] === '') {
-            transform = prop;
-        }
-
-        if (style[prop = 'transform'] === '') {
-            transform = prop;
-        }
-
-        document.body.insertBefore(el, null);
-        style[transform] = 'translate3d(0, 0, 0)';
-        hasTranslate3d = !!global.getComputedStyle(el).getPropertyValue(transform);
-        document.body.removeChild(el);
-    })();
-
-    return {
-        transform: transform,
-        transition: transition,
-        transitionEnd: transitionEnd,
-        hasTranslate3d: hasTranslate3d
-    };
-}
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 4 */
+/* 7 */,
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = dispatchEvent;
-
-var _customEvent = __webpack_require__(5);
-
-var _customEvent2 = _interopRequireDefault(_customEvent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * dispatch custom events
- *
- * @param  {element} el         slideshow element
- * @param  {string}  type       custom event name
- * @param  {object}  detail     custom detail information
- */
-function dispatchEvent(target, type, detail) {
-    var event = new _customEvent2.default(type, {
-        bubbles: true,
-        cancelable: true,
-        detail: detail
-    });
-
-    target.dispatchEvent(event);
-}
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {
-var NativeCustomEvent = global.CustomEvent;
-
-function useNative () {
-  try {
-    var p = new NativeCustomEvent('cat', { detail: { foo: 'bar' } });
-    return  'cat' === p.type && 'bar' === p.detail.foo;
-  } catch (e) {
-  }
-  return false;
-}
-
-/**
- * Cross-browser `CustomEvent` constructor.
- *
- * https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent.CustomEvent
- *
- * @public
- */
-
-module.exports = useNative() ? NativeCustomEvent :
-
-// IE >= 9
-'undefined' !== typeof document && 'function' === typeof document.createEvent ? function CustomEvent (type, params) {
-  var e = document.createEvent('CustomEvent');
-  if (params) {
-    e.initCustomEvent(type, params.bubbles, params.cancelable, params.detail);
-  } else {
-    e.initCustomEvent(type, false, false, void 0);
-  }
-  return e;
-} :
-
-// IE <= 8
-function CustomEvent (type, params) {
-  var e = document.createEventObject();
-  e.type = type;
-  if (params) {
-    e.bubbles = Boolean(params.bubbles);
-    e.cancelable = Boolean(params.cancelable);
-    e.detail = params.detail;
-  } else {
-    e.bubbles = false;
-    e.cancelable = false;
-    e.detail = void 0;
-  }
-  return e;
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _lory = __webpack_require__(1);
+var _lory = __webpack_require__(0);
 
 function init($) {
     $.fn.lory = function (options) {

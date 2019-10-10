@@ -1,28 +1,23 @@
-
 <p align="center">
   <img src="./static/lory.png" width="200px" />
 </p>
 
-Please visit: [http://meandmax.github.io/lory/](http://meandmax.github.io/lory/ "lory")
+Please visit: [http://loryjs.github.io/lory/](http://loryjs.github.io/lory/ 'lory')
 
 > Touch enabled minimalistic slider written in vanilla JavaScript.
 
-[![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/meandmax/lory/master/LICENSE)
+[![license](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/loryjs/lory/master/LICENSE)
 [![npm](http://img.shields.io/npm/v/lory.js.svg?style=flat)](https://www.npmjs.com/package/lory.js)
 [![CDNJS](https://img.shields.io/cdnjs/v/lory.js.svg)](https://cdnjs.com/libraries/lory.js/)
 [![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/lory.js/badge?style=rounded)](https://www.jsdelivr.com/package/npm/lory.js)
 
-[![build](http://img.shields.io/travis/meandmax/lory/master.svg?style=flat)](https://travis-ci.org/meandmax/lory)
-[![code climate](http://img.shields.io/codeclimate/github/meandmax/lory.svg?style=flat)](https://codeclimate.com/github/meandmax/lory)
-[![devDependencies](http://img.shields.io/david/dev/meandmax/lory.svg?style=flat)](https://david-dm.org/meandmax/lory#info=devDependencies&view=table)
+[![build](http://img.shields.io/travis/loryjs/lory/master.svg?style=flat)](https://travis-ci.org/loryjs/lory)
+[![devDependencies](http://img.shields.io/david/dev/loryjs/lory.svg?style=flat)](https://david-dm.org/loryjs/lory#info=devDependencies&view=table)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-[![Join the chat at https://gitter.im/meandmax/lory](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/meandmax/lory?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/loryjs/lory](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/loryjs/lory?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
-
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/meandmax.svg)](https://saucelabs.com/u/meandmax)
 
 ## Download
 
@@ -40,29 +35,29 @@ yarn add lory.js
 ## Consume it as an ES2015 module:
 
 ```js
-    import {lory} from 'lory.js';
+import { lory } from 'lory.js';
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const slider = document.querySelector('.js_slider');
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.js_slider');
 
-        lory(slider, {
-            // options going here
-        });
+    lory(slider, {
+        // options going here
     });
+});
 ```
 
 ## Consume it as an commonJS module:
 
 ```js
-    var lory = require('lory.js').lory;
+var lory = require('lory.js').lory;
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var slider = document.querySelector('.js_slider');
+document.addEventListener('DOMContentLoaded', function() {
+    var slider = document.querySelector('.js_slider');
 
-        lory(slider, {
-            // options going here
-        });
+    lory(slider, {
+        // options going here
     });
+});
 ```
 
 ## Install with bower
@@ -131,7 +126,8 @@ yarn run karma-local
  * (optional) define here the style definitions which should be applied on the slider container
  * e.g. width including further controls like arrows etc.
  */
-.slider {}
+.slider {
+}
 
 .frame {
     /**
@@ -265,6 +261,11 @@ li {
         <td>default: false</td>
     </tr>
     <tr>
+        <td>rewindPrev</td>
+        <td>if slider is on the first slide, with prev click the slider goes to the last slide. (do not combine with infinite)</td>
+        <td>default: false</td>
+    </tr>
+    <tr>
         <td>slideSpeed</td>
         <td>time in milliseconds for the animation of a valid slide attempt</td>
         <td>default: 300</td>
@@ -285,6 +286,11 @@ li {
         <td>default: 'ease'</td>
     </tr>
     <tr>
+        <td>initialIndex</td>
+        <td>the slide index to show when the slider is initialized</td>
+        <td>default: 0</td>
+    </tr>
+    <tr>
         <td>classNameFrame</td>
         <td>class name for slider frame</td>
         <td>default: 'js_frame'</td>
@@ -303,6 +309,16 @@ li {
         <td>classNameNextCtrl</td>
         <td>class name for slider next control</td>
         <td>default: 'js_next'</td>
+    </tr>
+    <tr>
+        <td>classNameDisabledPrevCtrl</td>
+        <td>class name for slider previous control then disabled</td>
+        <td>default: 'disabled'</td>
+    </tr>
+    <tr>
+        <td>classNameDisabledNextCtrl</td>
+        <td>class name for slider next control then disabled</td>
+        <td>default: 'disabled'</td>
     </tr>
 </table>
 
@@ -356,23 +372,24 @@ li {
 Please, do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. You've got much better chances of getting your question answered on [StackOverflow](http://stackoverflow.com/questions/tagged/lory) where maintainers are looking at questions tagged with `loryJS`.
 
 StackOverflow is a much better place to ask questions since:
-* There are hundreds of people willing to help on StackOverflow
-* Questions and answers stay available for public viewing so your question / answer might help someone else
-* The StackOverflow voting system assures that the best answers are prominently visible.
+
+-   There are hundreds of people willing to help on StackOverflow
+-   Questions and answers stay available for public viewing so your question / answer might help someone else
+-   The StackOverflow voting system assures that the best answers are prominently visible.
 
 To enforce this rule will be systematically closing all the issues that are requests for general support and redirecting people to StackOverflow.
 
 ## Browser Support
 
-* Chrome
-* Safari
-* FireFox
-* Opera
-* Internet Explorer 10+
+-   Chrome
+-   Safari
+-   FireFox
+-   Opera
+-   Internet Explorer 10+
 
-* Internet Explorer 9 (graceful, without transitions + classlistp)
-    - graceful, without transitions
-    - you need to polyfill classlist (https://github.com/eligrey/classList.js/)
+-   Internet Explorer 9 (graceful, without transitions + classlistp)
+    -   graceful, without transitions
+    -   you need to polyfill classlist (https://github.com/eligrey/classList.js/)
 
 ## Copyright
 
